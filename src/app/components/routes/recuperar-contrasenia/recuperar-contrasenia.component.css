@@ -1,0 +1,84 @@
+.recuperar-contrasenia {
+  /* margin-top: 40px; */
+}
+
+.titulo {
+  margin-top: 42px;
+  text-align: center;
+  margin-bottom: 14px;
+  font-family: "Dosis";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  color: #333333;
+}
+.recuperar-contrasenia__input {
+  width: 397px;
+  height: 370px;
+  background-color: #fdf8f8;
+  border: 1px solid #ea138c;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 10px;
+}
+.texto {
+  margin-top: 53px;
+  width: 263px;
+  height: 64px;
+  font-family: "Dosis";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 27px;
+  text-align: center;
+  color: #403a3a;
+}
+
+.contenedor-input {
+  margin-top: 46px;
+}
+.input {
+  padding: 10px;
+  width: 236px;
+  height: 47px;
+  background-color: #eaeaea;
+  border: 5px solid #ea138c;
+  box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.25);
+}
+.input::placeholder {
+  text-align: center;
+}
+.boton {
+  margin-top: 62px;
+  width: 256px;
+  height: 34px;
+  background: #ea138c;
+  box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.25);
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #fdf8f8;
+  border: none;
+}
+.texto-modal {
+  height: 112px;
+  font-family: "Dosis";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
+  color: #000000;
+  margin: 30px 22px;
+  background: #fdf8f8;
+  border: 2px solid #b97ebb;
+  border-radius: 10px;
+}
+.migas-de-pan {
+  font-family: "Dosis";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  color: #555555;
+  margin-top: 36px;
+  margin-left: 13px;
+}

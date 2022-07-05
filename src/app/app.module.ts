@@ -7,22 +7,24 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from './components/layout/layout.module';
 import { RoutesModule } from './components/routes/routes.module';
 import { SharedModule } from './components/shared/shared.module';
-
-
+import { RouterModule } from '@angular/router';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     LayoutModule,
     RoutesModule,
-    SharedModule
+    SharedModule,
+    RouterModule,
+    CarouselModule.forRoot(),
+    ModalModule.forRoot(),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
