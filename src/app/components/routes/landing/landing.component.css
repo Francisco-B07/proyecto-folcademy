@@ -1,0 +1,9 @@
+.landing {
+  padding: 34px;
+}
+
+.cards {
+  margin-top: 47px;
+  /* column-gap: 10px; */
+  row-gap: 109px;
+}

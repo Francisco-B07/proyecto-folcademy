@@ -1,0 +1,96 @@
+.card {
+  max-width: 648px;
+  height: 365px;
+  background-color: rgba(185, 126, 187, 0.5);
+  padding: 20px 40px;
+}
+
+.contenido {
+  max-width: 571px;
+  height: 275px;
+  background-color: #fdf8f8;
+  border: 1px solid #000000;
+}
+.informacion {
+  width: 50%;
+  padding: 5px 11px 17px 32px;
+}
+.informacion__titulo {
+  text-align: center;
+  font-family: "Dosis";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 25px;
+  color: #ea138c;
+  /* color: white; */
+}
+.informacion__descripcion {
+  font-family: "Dosis";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 25px;
+  color: #000000;
+  /* color: #ffffff; */
+
+  text-align: center;
+  height: 120px;
+}
+.botton-masInfo {
+  width: 100px;
+  height: 24.49px;
+  left: 933px;
+  top: 727px;
+  background-color: #ea138c;
+  box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.25);
+  border: none;
+  font-family: "Dosis";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+
+  color: #ffffff;
+}
+.imagen {
+  /* padding-right: 32px; */
+}
+.progress {
+  margin-top: 11px;
+  height: 23px;
+  background: #ea138c;
+  border: 1px solid #000000;
+  border-radius: 14px;
+  font-family: "Dosis";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  color: #ffffff;
+}
+.progress-bar {
+  background: #b97ebb;
+  /* border: 1px solid #000000; */
+  border-radius: 10px;
+}
+.boton-opcion {
+  margin-top: 15px;
+  width: 166px;
+  height: 39px;
+  background-color: #ea138c;
+  box-shadow: 4px 8px 4px rgba(0, 0, 0, 0.25);
+  border: none;
+  font-family: "Dosis";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  color: #ffffff;
+}
+.porc-falta {
+  margin-top: -4px;
+  font-size: 24px;
+  width: 100%;
+  text-align: center;
+}
