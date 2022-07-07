@@ -1,1 +1,1 @@
-web: npm run start:heroku
+node src/server.js
