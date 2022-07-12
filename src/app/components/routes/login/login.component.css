@@ -1,0 +1,51 @@
+h2 {
+    font-size: 20px;
+    margin-top: 30px;
+    text-align: center;
+  }
+  h2.linea {
+    position: relative;
+    z-index: 1;
+  }
+  h2.linea:before {
+    border-top: 1px solid #BFBFBF;
+    content: "";
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 25%;
+    z-index: -1;
+  }
+  h2.linea span {
+  
+    background: #fff;
+    padding: 0 15px;
+  }
+  input{
+    background-color: #FDF8F8;
+    width: 526px;
+    height: 49px;
+    border-color: #EA138C;
+    border-radius: 1px;
+  }
+  .input::placeholder{
+    text-align: center;
+    color: black;
+    font-size: 20px;
+  }
+  .miga-de-pan{
+    color: #555555;
+    font-size: 20px;
+  }
+  button{
+    width: 376px;
+    height: 66px;
+    background-color: #EA138C;
+    color: white;
+  }
+  a{
+    font-size: 20px;
+  }

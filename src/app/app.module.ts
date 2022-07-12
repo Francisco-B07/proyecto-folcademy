@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from './components/layout/layout.module';
 import { RoutesModule } from './components/routes/routes.module';
 import { SharedModule } from './components/shared/shared.module';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -20,7 +21,8 @@ import { SharedModule } from './components/shared/shared.module';
     BrowserAnimationsModule,
     LayoutModule,
     RoutesModule,
-    SharedModule
+    SharedModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
