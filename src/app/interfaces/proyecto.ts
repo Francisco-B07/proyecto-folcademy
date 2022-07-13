@@ -1,4 +1,5 @@
 export interface Proyecto {
+  tipo: string;
   imagen: string;
   titulo: string;
   descripcion: string;

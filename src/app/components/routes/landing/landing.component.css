@@ -35,3 +35,45 @@
   align-items: center;
   border: none;
 }
+.navegador {
+  margin-top: 35px;
+}
+.pagination ::ng-deep .ngx-pagination {
+  background-color: white !important;
+  font-family: "Dosis";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 40px;
+  text-align: center;
+  color: #ea138c;
+}
+.pagination ::ng-deep .ngx-pagination .current {
+  background-color: white !important;
+  font-family: "Dosis";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 40px;
+  text-align: center;
+  color: #ea138c;
+  text-decoration: underline;
+}
+.breadcrumb-item {
+  margin-left: 26px;
+  margin-top: 12px;
+}
+.nav-link {
+  font-family: "Dosis";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+
+  color: #857b7b !important;
+}
+.link-proyectos {
+  text-decoration: underline;
+  color: #857b7b !important;
+  padding-left: 0;
+}

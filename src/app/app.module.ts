@@ -10,6 +10,7 @@ import { SharedModule } from './components/shared/shared.module';
 import { RouterModule } from '@angular/router';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [AppComponent],
@@ -23,6 +24,7 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     RouterModule,
     CarouselModule.forRoot(),
     ModalModule.forRoot(),
+    NgxPaginationModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

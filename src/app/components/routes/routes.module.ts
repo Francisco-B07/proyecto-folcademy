@@ -7,6 +7,7 @@ import { ProyectoComponent } from './proyecto/proyecto.component';
 import { RouterModule } from '@angular/router';
 import { RecuperarContraseniaComponent } from './recuperar-contrasenia/recuperar-contrasenia.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -19,12 +20,9 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     CarouselModule.forRoot(),
     SharedModule,
     ModalModule.forRoot(),
-  ],
-  exports: [
-    LandingComponent,
-    ProyectoComponent,
+    NgxPaginationModule,
     RouterModule,
-    RecuperarContraseniaComponent,
   ],
+  exports: [LandingComponent, ProyectoComponent, RecuperarContraseniaComponent],
 })
 export class RoutesModule {}

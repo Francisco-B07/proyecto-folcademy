@@ -1,18 +1,12 @@
 <div class="card col-11">
-  <img
-    src="../../../../assets/bisblick.jpg"
-    class="card-img-top card-imagen col-11"
-    alt="..."
-  />
+  <img src="{{ imagen }}" class="card-img-top card-imagen col-11" alt="..." />
   <div class="card-body">
     <div class="d-flex justify-content-between header-card">
-      <h5 class="card-title">Ayudemos a Juan</h5>
+      <h5 class="card-title">{{ titulo }}</h5>
       <img class="imagen-compartir" src="../../../../assets/Group.svg" alt="" />
     </div>
     <p class="card-text">
-      Somos miembro de Primero Educacion, un grupo de organizaciones de la
-      sociedad jskdifnrlñas, pasomd psamdeun j kd clao lasjbk nd civil que
-      trabajamos para ubicar a la educación como prioridad nacional.
+      {{ descripcion }}
     </p>
   </div>
   <div class="card-body row justify-content-md-center">
@@ -24,7 +18,9 @@
       />
       <div class="row objetivo">
         <p class="progreso-numeros">RECAUDAD0 HASTA EL MOMENTO</p>
-        <span class="progreso-numeros"><b> $30.000</b></span>
+        <span class="progreso-numeros"
+          ><b> ${{ recaudado }}</b></span
+        >
       </div>
     </div>
   </div>

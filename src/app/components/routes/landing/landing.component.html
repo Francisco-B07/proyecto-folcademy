@@ -1,3 +1,15 @@
+<ul class="breadcrumb">
+  <li class="breadcrumb-item d-flex">
+    <a class="nav-link" href="https://www.bisblick.org/quienes-somos/">
+      <img
+        href="https://www.bisblick.org/quienes-somos/"
+        src="../../../../assets/Arrow 76.svg"
+        alt=""
+      />
+    </a>
+    <span class="nav-link link-proyectos"> Proyectos </span>
+  </li>
+</ul>
 <div class="landing d-flex flex-column align-items-center">
   <div class="presentacion">
     <h1 class="titulo-landing">JOVENES CON FUTURO</h1>
@@ -9,21 +21,44 @@
       BisBlick participan de un programa de alto potencial que contempla beca
       económica y mentorías para que puedan sostener los estudios superiores,
       capacitaciones en habilidades blandas y digitales y oportunidades de
-      inserción laboral
+      inserción laboral.
     </p>
   </div>
   <div class="cards row row-cols-2">
-    <div *ngFor="let proyecto of proyectos">
-      <app-card-proyecto
-        [imagen]="proyecto.imagen"
-        [titulo]="proyecto.titulo"
-        [descripcion]="proyecto.descripcion"
-        [recaudado]="proyecto.recaudado"
-        [objetivo]="proyecto.objetivo"
-        [opcion]="proyecto.opcion"
-        class="card"
-      ></app-card-proyecto>
+    <div
+      *ngFor="
+        let proyecto of proyectos
+          | paginate: { itemsPerPage: 6, currentPage: pageActual }
+      "
+    >
+      <div *ngIf="proyecto.tipo == 'suscripcion'">
+        <app-card-suscripcion
+          [imagen]="proyecto.imagen"
+          [titulo]="proyecto.titulo"
+          [descripcion]="proyecto.descripcion"
+          [recaudado]="proyecto.recaudado"
+          class="card"
+        ></app-card-suscripcion>
+      </div>
+
+      <div *ngIf="proyecto.tipo == 'proyecto'">
+        <app-card-proyecto
+          [imagen]="proyecto.imagen"
+          [titulo]="proyecto.titulo"
+          [descripcion]="proyecto.descripcion"
+          [recaudado]="proyecto.recaudado"
+          [objetivo]="proyecto.objetivo"
+          [opcion]="proyecto.opcion"
+          class="card"
+        ></app-card-proyecto>
+      </div>
     </div>
-    <!-- <app-card-proyecto></app-card-proyecto> -->
   </div>
+  <pagination-controls
+    class="pagination navegador"
+    (pageChange)="pageActual = $event"
+    [autoHide]="true"
+    previousLabel=""
+    nextLabel=""
+  ></pagination-controls>
 </div>
