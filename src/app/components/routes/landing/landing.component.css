@@ -1,9 +1,37 @@
 .landing {
-  padding: 91px;
+  padding: 32px 82px;
 }
-
+.titulo-landing {
+  text-align: center;
+  font-family: "Dosis";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  color: #ea138c;
+  text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.presentacion-bisblick {
+  margin-top: 30px;
+  margin-bottom: 85px;
+  font-family: "Dosis";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 35px;
+  text-align: center;
+  color: #000000;
+}
+.row,
+.row-cols-2 {
+  padding: 0 !important;
+  margin: 0 !important;
+}
 .cards {
   margin-top: 47px;
-  /* column-gap: 10px; */
   row-gap: 109px;
+}
+.card {
+  display: flex;
+  align-items: center;
+  border: none;
 }

@@ -1,28 +1,29 @@
-<div class="cards row row-cols-2 landing">
-  <!-- <app-card-proyecto></app-card-proyecto> -->
-  <app-card-proyecto></app-card-proyecto>
-  <app-card-proyecto></app-card-proyecto>
-  <app-card-proyecto></app-card-proyecto>
-
-  <!-- <app-card-suscripcion
-    [imagen]="'../../../../assets/image 49.png'"
-    [porcentaje]="80"
-  ></app-card-suscripcion>
-
-  <app-card-proyecto
-    [imagen]="'../../../../assets/image 49.png'"
-    [opcion]="'Quiero Donar'"
-    [porcentaje]="25"
-  ></app-card-proyecto>
-  <app-card-proyecto
-    [imagen]="'../../../../assets/image 49.png'"
-    [opcion]="'Quiero Donar'"
-    [porcentaje]="25"
-  ></app-card-proyecto>
-  <app-card-proyecto
-    [imagen]="'../../../../assets/image 49.png'"
-    [descripcion]="'Descripción...'"
-    [opcion]="'Quiero Participar'"
-    [porcentaje]="25"
-  ></app-card-proyecto> -->
+<div class="landing d-flex flex-column align-items-center">
+  <div class="presentacion">
+    <h1 class="titulo-landing">JOVENES CON FUTURO</h1>
+    <p class="presentacion-bisblick">
+      Desde 2013, acompañamos a jóvenes con alto potencial y escasos recursos
+      socio-económicos para que puedan convertirse en los primeros profesionales
+      de sus familias, generando un impacto directo en su comunidad y entorno.
+      Nos interesa su desarrollo personal, académico y profesional. Los jóvenes
+      BisBlick participan de un programa de alto potencial que contempla beca
+      económica y mentorías para que puedan sostener los estudios superiores,
+      capacitaciones en habilidades blandas y digitales y oportunidades de
+      inserción laboral
+    </p>
+  </div>
+  <div class="cards row row-cols-2">
+    <div *ngFor="let proyecto of proyectos">
+      <app-card-proyecto
+        [imagen]="proyecto.imagen"
+        [titulo]="proyecto.titulo"
+        [descripcion]="proyecto.descripcion"
+        [recaudado]="proyecto.recaudado"
+        [objetivo]="proyecto.objetivo"
+        [opcion]="proyecto.opcion"
+        class="card"
+      ></app-card-proyecto>
+    </div>
+    <!-- <app-card-proyecto></app-card-proyecto> -->
+  </div>
 </div>
