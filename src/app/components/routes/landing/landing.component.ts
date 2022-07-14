@@ -40,7 +40,7 @@ export class LandingComponent implements OnInit {
       titulo: 'Ayudemos a Dani',
       descripcion:
         'Somos miembro de Primero Educacion, un grupo de organizaciones de la sociedad jskdifnrlñas, pasomd psamdeun j kd clao lasjbk nd civil que trabajamos para ubicar a la educación como prioridad nacional.',
-      recaudado: 10000,
+      recaudado: 30000,
       objetivo: 100000,
       opcion: 'Donar',
     },
