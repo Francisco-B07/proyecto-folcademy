@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-<<<<<<< HEAD
 import { LoginComponent } from './components/routes/login/login.component';
 import { ContrasenaComponent } from './components/routes/contrasena/contrasena.component';
 import { CambiarContrasenaComponent } from './components/routes/cambiar-contrasena/cambiar-contrasena.component';
@@ -28,25 +27,6 @@ const routes: Routes = [
   path: 'proyectos-admin',
   component: ProyectosAdminComponent
 }
-=======
-import { LandingComponent } from './components/routes/landing/landing.component';
-import { ProyectoComponent } from './components/routes/proyecto/proyecto.component';
-import { RecuperarContraseniaComponent } from './components/routes/recuperar-contrasenia/recuperar-contrasenia.component';
-
-const routes: Routes = [
-  {
-    path: '',
-    component: LandingComponent,
-  },
-  {
-    path: 'Proyecto',
-    component: ProyectoComponent,
-  },
-  {
-    path: 'recuperarContrasenia',
-    component: RecuperarContraseniaComponent,
-  },
->>>>>>> b4df42132572d40b419ae58e55e92d038fade78f
 ];
 
 @NgModule({
