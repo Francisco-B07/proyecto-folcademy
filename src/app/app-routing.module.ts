@@ -38,7 +38,6 @@ const routes: Routes = [
   path: 'crear-usuario',
   component: CrearUsuarioComponent
 }
-
 ];
 
 @NgModule({
