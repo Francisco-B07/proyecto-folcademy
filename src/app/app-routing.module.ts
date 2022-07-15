@@ -6,6 +6,7 @@ import { CambiarContrasenaComponent } from './components/routes/cambiar-contrase
 import { UsuarioAdminComponent } from './components/routes/usuario-admin/usuario-admin.component';
 import { ProyectosAdminComponent } from './components/routes/proyectos-admin/proyectos-admin.component';
 import { RecuperarContraseniaComponent } from './components/routes/recuperar-contrasenia/recuperar-contrasenia.component';
+import { CrearUsuarioComponent } from './components/routes/crear-usuario/crear-usuario.component';
 
 
 const routes: Routes = [
@@ -32,6 +33,10 @@ const routes: Routes = [
 {
   path: 'recuperar-contraseña',
   component: RecuperarContraseniaComponent
+},
+{
+  path: 'crear-usuario',
+  component: CrearUsuarioComponent
 }
 
 ];

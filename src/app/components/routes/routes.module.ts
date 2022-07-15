@@ -9,6 +9,9 @@ import { ProyectosAdminComponent } from './proyectos-admin/proyectos-admin.compo
 import { RecuperarContraseniaComponent } from './recuperar-contrasenia/recuperar-contrasenia.component';
 import { SharedModule } from '../shared/shared.module';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { CrearUsuarioComponent } from './crear-usuario/crear-usuario.component';
+import { EditarUsuarioComponent } from './editar-usuario/editar-usuario.component';
+import { LandingComponent } from './landing/landing.component';
 
 
 
@@ -16,7 +19,7 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 
 
 @NgModule({
-  declarations: [LoginComponent, ContrasenaComponent, CambiarContrasenaComponent, UsuarioAdminComponent, ProyectosAdminComponent,RecuperarContraseniaComponent],
+  declarations: [LoginComponent, ContrasenaComponent, CambiarContrasenaComponent, UsuarioAdminComponent, ProyectosAdminComponent,RecuperarContraseniaComponent, CrearUsuarioComponent, EditarUsuarioComponent, LandingComponent],
   imports: [
     CommonModule,
     RouterModule,
