@@ -7,11 +7,12 @@ import { UsuarioAdminComponent } from './components/routes/usuario-admin/usuario
 import { ProyectosAdminComponent } from './components/routes/proyectos-admin/proyectos-admin.component';
 import { RecuperarContraseniaComponent } from './components/routes/recuperar-contrasenia/recuperar-contrasenia.component';
 import { CrearUsuarioComponent } from './components/routes/crear-usuario/crear-usuario.component';
+import { LandingComponent } from './components/routes/landing/landing.component';
 
 
 const routes: Routes = [
   {
-  path: 'admin',
+  path: '',
   component: LoginComponent,
 },
 {
@@ -37,7 +38,12 @@ const routes: Routes = [
 {
   path: 'crear-usuario',
   component: CrearUsuarioComponent
+},
+{
+  path: 'landing',
+  component: LandingComponent
 }
+
 ];
 
 @NgModule({
