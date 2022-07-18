@@ -58,7 +58,7 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 .cont{
     margin-top: -117px;
 }
-a{
+.letrero1{
     font-size: 26px;
     text-decoration: none;
     color: #EA138C;
@@ -93,4 +93,83 @@ h2{
 }
 .texto-1{
     background: rgba(234, 19, 140, 0.14);
+}
+
+.miga-de-pan{
+    color: #555555;
+    font-size: 15px;
+  }
+  .contenedor{
+    margin-top: 50px;
+  }
+  .cambio{  
+    height: 567px;
+    width: 397px;
+    border: solid 1px;
+    background-color: #FDF8F8;
+    border-color: #EA138C;
+  }
+ .imagen{
+    width: 249px;
+    height: 77px;
+ }
+ .input-modal{
+    background-color: #FDF8F8;
+    width: 322px;
+    height: 34px;
+   
+    border-radius: 1px;
+    border: #EA138C solid 2px
+  }
+  .input::placeholder{
+    text-align: center;
+    color: #555555;
+    font-size: 20px;
+  }
+  .button-modal{
+    width: 256px;
+    height: 34px;
+    background-color: #EA138C;
+    color: white;
+    margin-left: 70px;
+    font-weight: 500;
+    font-size: 26px;
+  }
+.cancelar{
+    width: 256px;
+    background-color: #FDF8F8;
+    color: #EA138C;
+    margin-left: 70px;
+    font-weight: 700;
+    font-size: 24px;
+}
+.texto-modal{
+    background-color: #FDF8F8;
+    width: 369px;
+    height: 112px;
+    border: 2px solid #B97EBB;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-right: 64px;
+    margin-left: 65px;
+}
+.boton-modal{
+    background: #D9D9D9;
+    box-shadow: 2px 4px 4px rgb(0 0 0 / 25%);
+    border-radius: 30px;
+}
+.boton-modal-izq{
+    margin-right: 50px;
+    background: #D9D9D9;
+    box-shadow: 2px 4px 4px rgb(0 0 0 / 25%);
+    border-radius: 30px;
+}
+.letra-modal{
+    font-family: 'Dosis';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    color: #000000;
 }

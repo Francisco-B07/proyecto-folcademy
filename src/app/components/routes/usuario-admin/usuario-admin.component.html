@@ -7,7 +7,7 @@
         <div class="col-3 contenedor-2 cont">
             <button class="btn" type="submit">Usuario</button>
             <button class="btn" type="submit">Proyectos</button>
-            <a class="d-flex" href="" routerLink="/admin">Cerrar Seción</a>
+            <a class="d-flex letrero1" href="" routerLink="/login">Cerrar Seción</a>
         </div>
     
         <div class="col-8 contenedor ms-5">
@@ -17,7 +17,66 @@
             <div>
                 <form class="d-flex" role="search">
                     <input class="form-control me-2 buscador" type="search" placeholder="Buscar por nombre, email" aria-label="Search">
-                    <button class="btn btn-outline-dark boton-buscar" type="submit" routerLink="/crear-usuario" >Crear Usuario</button>
+    <ng-template #contenido let modal>
+        <!-- <div class="modal-header">
+            <h4 class="modal-title">Titulo Modal</h4>
+            <button class="close" aria-label="close" type="button" (click)="modalRef?.hide()">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div> -->
+        <div class="modal-body">
+            <div class="col-12">
+                <div class="container">
+                  
+                      <div class="cambio">
+                          <img src="assets/logoBisblick.png" alt="Logo de Bisblick" class="m-auto my-sm-4 d-flex imagen">
+              
+                          <div>
+                              <form >
+                                  <div class="mb-3">
+                                    <input type="text" class="form-control m-auto input mt-sm-5" placeholder="Nombre...">
+                                  </div>
+                                  <div class="mb-3">
+                                      <input type="text" class="form-control m-auto input mt-sm-5" placeholder="Apellido...">
+                                    </div>
+              
+                                    <div class="mb-3">
+                                      <input type="text" class="form-control m-auto input mt-sm-5 input-modal" placeholder="Correo electronico...">
+                                    </div>
+              
+                                    <div class="mb-3">
+                                        <ng-template #contenido let modal>
+                                            <!-- <div class="modal-header">
+                                                <h4 class="modal-title">Titulo Modal</h4>
+                                                <button class="close" aria-label="close" type="button" (click)="modalRef?.hide()">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div> -->
+                                            <div class="modal-body">
+                                                ¡Has creado un nuevo usuario con éxito!
+                                            </div>
+                                        </ng-template>
+                                      <button type="button" class="btn mat-elevation-z15 form-control-lg mt-sm-5 button-modal" (click)="openModal(contenido)">Crear Usuario</button>
+                                    </div> 
+              
+                                    <!-- Preguntar sobre conflicto al intentar "cancelar" luego de haber "creado usuario" -->
+                                    <div class="mb-3">
+                                      <button type="button" class="btn form-control-lg my-sm-3 cancelar button-modal"(click)="modalRef?.hide()">Cancelar</button>
+                                    </div> 
+                              </form>
+                          </div>
+              
+                      </div>
+              
+                      
+                  
+              </div>
+              </div>
+        </div>
+    </ng-template>
+    
+                    <!-- Preguntar sobre conflicto que al querer quitar routerLink no funciona el modal -->
+                    <button class="btn btn-outline-dark boton-buscar" type="submit" routerLink="/proyectos-admin" (click)="openModal(contenido)" >Crear Usuario</button>
                     
                 </form>
             </div>
@@ -34,24 +93,113 @@
                     <p class="m-auto col-3 ps-lg-2 ">Soledad </p>
                     <p class="m-auto col-3">Martinez</p>
                     <p class="m-auto col-4" >Soledadmartinez22@gmail.com</p>
-                    <img  class="m-auto " src="assets/pencil.svg" alt="">
-                    <img  class="m-auto " src="assets/tong.svg" alt="">
+                    <div class="m-auto ">
+                    
+                            <button class="btn-sm btn" routerLink="/editar-usuario">
+                                <img src="assets/pencil.svg" alt="">
+                            </button>
+                        
+                    </div>
+                    
+                    <div class="m-auto ">
+
+                        <ng-template #template>
+                            <div class="modal-header">
+                            </div>
+                            <div class="d-flex justify-content-center row modal-body texto-modal ">
+                             <p class="letra-modal">
+                                ¿Estas seguro que deseas eliminar?
+                             </p> 
+                              
+                              <div class="row">
+                                <button class="btn col-5 boton-modal-izq">Si</button>
+                                <button class="btn col-5 boton-modal">No</button>
+                              </div>
+                              
+                            </div>
+                        </ng-template>
+
+                        <button class="btn-sm btn" (click)="openModal(template)">
+                            <img src="assets/tong.svg" alt="">
+                        </button>
+                            
+                        
+                    </div>
                 </div>
 
                 <div class="texto d-flex col-12 my-md-3">
                     <p class="m-auto col-3 ps-lg-2 ">Adriana Carolina</p>
                     <p class="m-auto col-3">Hernandez</p>
                     <p class="m-auto col-4" >AdrianaCarolina@gmail.com</p>
-                    <img  class="m-auto " src="assets/pencil.svg" alt="">
-                    <img  class="m-auto " src="assets/tong.svg" alt="">
+                    <div class="m-auto ">
+                        <button class="btn-sm btn" routerLink="/editar-usuario">
+                            <img src="assets/pencil.svg" alt="">
+                        </button>
+                            
+                        
+                    </div>
+                    <div class="m-auto ">
+
+                        <ng-template #template>
+                            <div class="modal-header">
+                            </div>
+                            <div class="d-flex justify-content-center row modal-body texto-modal ">
+                             <p class="letra-modal">
+                                ¿Estas seguro que deseas eliminar?
+                             </p> 
+                              
+                              <div class="row">
+                                <button class="btn col-5 boton-modal-izq">Si</button>
+                                <button class="btn col-5 boton-modal">No</button>
+                                <!-- Preguntar como hacer que el boton "No" cierre -->
+                              </div>
+                              
+                            </div>
+                        </ng-template>
+
+                        <button class="btn-sm btn" (click)="openModal(template)">
+                            <img src="assets/tong.svg" alt="">
+                        </button>
+                            
+                        
+                    </div>
                 </div>
 
                 <div class="texto d-flex col-12 my-md-3">
                     <p class="m-auto col-3 ps-lg-2 ">Juan Ignacio </p>
                     <p class="m-auto col-3">Sanchez Perez</p>
                     <p class="m-auto col-4" >JuanIgnacioSanchez@gmail.com</p>
-                    <img  class="m-auto " src="assets/pencil.svg" alt="">
-                    <img  class="m-auto " src="assets/tong.svg" alt="">
+                    <div class="m-auto ">
+                        <button class="btn-sm btn" routerLink="/editar-usuario">
+                            <img src="assets/pencil.svg" alt="">
+                        </button>
+                            
+                        
+                    </div>
+                    <div class="m-auto ">
+
+                        <ng-template #template>
+                            <div class="modal-header">
+                            </div>
+                            <div class="d-flex justify-content-center row modal-body texto-modal ">
+                             <p class="letra-modal">
+                                ¿Estas seguro que deseas eliminar?
+                             </p> 
+                              
+                              <div class="row">
+                                <button class="btn col-5 boton-modal-izq">Si</button>
+                                <button class="btn col-5 boton-modal">No</button>
+                              </div>
+                              
+                            </div>
+                        </ng-template>
+
+                        <button class="btn-sm btn" (click)="openModal(template)">
+                            <img src="assets/tong.svg" alt="">
+                        </button>
+                            
+                        
+                    </div>
                 </div>
                 </div>
             </div>
@@ -63,12 +211,12 @@
     
 
 </section>
+<!-- <br>
 <br>
 <br>
 <br>
 <br>
-<br>
-<br>
+<br> -->
 
 <!-- <section class="container">
     <p class="letrero">Usuarios Administradores</p>

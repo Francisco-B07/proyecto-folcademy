@@ -8,11 +8,12 @@ import { ProyectosAdminComponent } from './components/routes/proyectos-admin/pro
 import { RecuperarContraseniaComponent } from './components/routes/recuperar-contrasenia/recuperar-contrasenia.component';
 import { CrearUsuarioComponent } from './components/routes/crear-usuario/crear-usuario.component';
 import { LandingComponent } from './components/routes/landing/landing.component';
+import { EditarUsuarioComponent } from './components/routes/editar-usuario/editar-usuario.component';
 
 
 const routes: Routes = [
   {
-  path: '',
+  path: 'login',
   component: LoginComponent,
 },
 {
@@ -40,8 +41,12 @@ const routes: Routes = [
   component: CrearUsuarioComponent
 },
 {
-  path: 'landing',
+  path: '',
   component: LandingComponent
+},
+{
+  path: 'editar-usuario',
+  component: EditarUsuarioComponent
 }
 
 ];
