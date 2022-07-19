@@ -1,114 +1,167 @@
 .card {
+  background: #ffffff;
+  mix-blend-mode: normal;
+  border: 1.72772px solid #dfdfdf;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.25);
   padding: 0px !important;
   margin: 0px !important;
-  /* height: 791px !important; */
-  height: 750px !important;
-  border: 5px solid #ea138c;
-  filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.8));
-  border-radius: 41px;
+  height: 544px !important;
+}
+
+/* cabecera */
+.imagen {
+  max-height: 221px;
 }
 .card-imagen {
-  /* height: 319px; */
-  height: 270px;
-  border-radius: 33px;
+  height: 221px;
+  mix-blend-mode: darken;
+}
+.imagen-compartir {
+  position: relative;
+  top: -221px;
+  margin-top: 19px;
+  float: right;
+  margin-right: 21px;
+  width: 29px;
+  height: 28px;
+}
+.imagen-compartir:hover {
+  width: 33px;
+  height: 33px;
+  top: -223px;
+  margin-right: 19px;
 }
 
-.header-card {
-  padding: 0 13px;
+/* descripción */
+.contenido {
+  padding: 0 28px;
 }
 .card-title {
-  font-family: "Dosis";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 35px;
-  line-height: 44px;
-  color: #1c191a;
-  text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.imagen-compartir {
-  width: 50px;
-  height: 50.42px;
-}
-
-.card-text {
   margin-top: 15px;
-  padding: 0 13px;
-  height: 80px;
-  font-family: "Dosis";
+  margin-bottom: 0;
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
-  font-size: 23px;
-  text-align: justify;
-  color: #2d2a2a;
-  line-height: 29px;
+  font-size: 19px;
+  line-height: 23px;
+  color: #1c191a;
+  mix-blend-mode: darken;
 }
 
-.monto-recaudado {
-  padding: 7px 20px;
-  margin-top: 45px;
-  height: 76px;
-  background: rgba(222, 122, 178, 0.2);
-  border-radius: 11px;
+.card-description {
+  margin-top: 12px;
+  margin-bottom: 0;
+  height: 100px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: justify;
+  color: #8b8b8b;
+  mix-blend-mode: darken;
+  overflow: auto;
 }
-.progreso-numeros {
-  font-family: "Dosis";
+
+/* avance del proyecto */
+
+.footer-card {
+  padding: 0 28px;
+  margin-top: 6px;
+  height: 163px;
+  background: #f9f9f9;
+}
+
+.progreso-titulo {
+  margin-right: 15px;
+  margin-top: 12px;
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
-  font-size: 23px;
-  color: #000000;
+  font-size: 15px;
+  line-height: 18px;
+  color: #4f2c59;
+}
+.progreso-monto {
+  margin-top: 12px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 15px;
+  line-height: 18px;
+  color: #592e59;
 }
 
 .progress {
-  /* margin-top: 30px; */
-  margin-top: 25px;
+  background: #dedddd;
+  border-radius: 12.5px;
+
+  margin-top: 22px;
   padding: 0;
-  height: 23px;
-  background-color: #fdfffd;
+  height: 16px;
   border: 1px solid #000000;
-  border-radius: 14px;
-  font-family: "Dosis";
+
+  font-family: "Montserrat";
   font-style: normal;
-  color: #ffffff;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 10px;
+  line-height: 12px;
   color: #ffffff;
 }
 
 .progress-bar {
-  background: #40c24d;
-  border-radius: 23px;
+  background: #592e59;
+  border-radius: 16.5px;
   min-width: 35%;
   width: 70%;
 }
-
-.botton-masInfo {
-  margin-right: 31px;
+.botones {
+  margin-top: 26px;
+  padding: 0;
+}
+.boton-masInfo {
+  width: 137px;
+  height: 35px;
+  background: #d9d9d9;
+  border-radius: 25.5px;
+  margin-right: 39px;
   border: none;
-  /* width: 146px; */
-  height: 37.05px;
-  background-color: #592e59;
-  box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.25);
-  font-family: "Dosis";
+
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  text-decoration-line: underline;
+  color: #592e59;
+  text-align: center;
+}
+.boton-masInfo:hover {
+  background: #592e59;
+  border: 1px solid #592e59;
+  width: 139px;
+  height: 37px;
+  margin-top: -1px;
+
+  color: #fcfcfc;
+}
+.boton-opcion {
+  background: #ea138c;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 17px;
+  width: 197px;
+  height: 35px;
+  border: none;
+
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 12px;
   text-align: center;
   color: #ffffff;
 }
-
-.boton-opcion {
-  border: none;
-  /* width: 194px; */
-  height: 39px;
-  background-color: #ea138c;
-  box-shadow: 4px 8px 4px rgba(0, 0, 0, 0.25);
-  font-family: "Dosis";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
-  color: #ffffff;
-}
-.botones {
-  margin-top: 0;
+.boton-opcion:hover {
+  width: 199px;
+  height: 37px;
+  margin-top: -1px;
 }

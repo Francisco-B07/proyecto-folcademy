@@ -17,7 +17,7 @@ export class CardProyectoComponent implements OnInit {
 
   constructor() {}
   tipoProyecto() {
-    if (this.opcion == 'Donar') {
+    if (this.opcion == 'DONAR') {
       return true;
     } else {
       return false;

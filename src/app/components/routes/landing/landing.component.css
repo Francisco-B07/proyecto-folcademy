@@ -1,25 +1,27 @@
 .landing {
+  margin: 172px auto 0px;
   padding: 0px 82px;
 }
 .titulo-landing {
-  text-align: center;
-  font-family: "Dosis";
+  font-family: "Montserrat";
   font-style: normal;
-  font-weight: 600;
-  font-size: 40px;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 39px;
+  text-align: center;
+  letter-spacing: 0.2em;
   color: #ea138c;
-  text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .presentacion-bisblick {
-  margin-top: 30px;
-  margin-bottom: 85px;
-  font-family: "Dosis";
+  font-family: "Montserrat";
   font-style: normal;
-  font-weight: 500;
-  font-size: 28px;
-  line-height: 35px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 37px;
   text-align: center;
-  color: #000000;
+  color: #383838;
+  margin-top: 41px;
+  margin-bottom: 110px;
 }
 .row,
 .row-cols-2 {
@@ -27,12 +29,10 @@
   margin: 0 !important;
 }
 .cards {
-  margin-top: 47px;
-  row-gap: 109px;
+  row-gap: 79px;
 }
 
 .landing__contenedor {
-  min-height: 2500px;
 }
 .card {
   display: flex;
@@ -43,22 +43,22 @@
   margin-top: 35px;
 }
 .pagination ::ng-deep .ngx-pagination {
-  background-color: white !important;
-  font-family: "Dosis";
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
-  font-size: 32px;
-  line-height: 40px;
+  font-size: 20px;
+  line-height: 24px;
   text-align: center;
-  color: #ea138c;
+  background-color: white !important;
+  color: #8b8b8b;
 }
 .pagination ::ng-deep .ngx-pagination .current {
   background-color: white !important;
-  font-family: "Dosis";
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
-  font-size: 32px;
-  line-height: 40px;
+  font-size: 20px;
+  line-height: 24px;
   text-align: center;
   color: #ea138c;
   text-decoration: underline;
@@ -80,4 +80,47 @@
   text-decoration: underline;
   color: #857b7b !important;
   padding-left: 0;
+}
+.impacto {
+  padding: 54px 180px 100px 180px;
+  width: 100%;
+  height: 365px;
+  background: #f9f9f9;
+  margin-top: 26px;
+  margin-bottom: 0;
+}
+.impacto-datos {
+  margin-top: 55px;
+}
+.impacto__titulo {
+  text-align: center;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 49px;
+  letter-spacing: 0.1em;
+  color: #ea138c;
+}
+.numero {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 49px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  color: #ea138c;
+}
+.texto {
+  max-width: 171px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 22px;
+  text-align: center;
+  letter-spacing: 0.1em;
+
+  color: #8b8b8b;
 }

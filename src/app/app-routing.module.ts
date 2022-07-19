@@ -5,28 +5,33 @@ import { ContrasenaComponent } from './components/routes/contrasena/contrasena.c
 import { CambiarContrasenaComponent } from './components/routes/cambiar-contrasena/cambiar-contrasena.component';
 import { UsuarioAdminComponent } from './components/routes/usuario-admin/usuario-admin.component';
 import { ProyectosAdminComponent } from './components/routes/proyectos-admin/proyectos-admin.component';
+import { LandingComponent } from './components/routes/landing/landing.component';
 
 const routes: Routes = [
   {
-  path: 'admin',
-  component: LoginComponent,
-},
-{
-  path: 'contraseña',
-  component: ContrasenaComponent
-},
-{
-  path: 'cambio-contraseña',
-  component: CambiarContrasenaComponent
-},
-{
-  path: 'usuario-admin',
-  component: UsuarioAdminComponent
-},
-{
-  path: 'proyectos-admin',
-  component: ProyectosAdminComponent
-}
+    path: '',
+    component: LandingComponent,
+  },
+  {
+    path: 'admin',
+    component: LoginComponent,
+  },
+  {
+    path: 'contraseña',
+    component: ContrasenaComponent,
+  },
+  {
+    path: 'cambio-contraseña',
+    component: CambiarContrasenaComponent,
+  },
+  {
+    path: 'usuario-admin',
+    component: UsuarioAdminComponent,
+  },
+  {
+    path: 'proyectos-admin',
+    component: ProyectosAdminComponent,
+  },
 ];
 
 @NgModule({

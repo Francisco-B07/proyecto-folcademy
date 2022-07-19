@@ -1,31 +1,27 @@
-<div class="card col-11">
-  <img src="{{ imagen }}" class="card-img-top card-imagen col-11" alt="..." />
-  <div class="card-body">
-    <div class="d-flex justify-content-between header-card">
+<div class="card col-10">
+  <div class="imagen">
+    <img src="{{ imagen }}" class="card-img-top card-imagen col-10" alt="..." />
+    <img
+      class="imagen-compartir"
+      src="../../../../assets/Frame 66.svg"
+      alt=""
+    />
+  </div>
+  <div class="contenido">
+    <div class="d-flex justify-content-between">
       <h5 class="card-title">{{ titulo }}</h5>
-      <img class="imagen-compartir" src="../../../../assets/Group.svg" alt="" />
     </div>
-    <p class="card-text">
+    <p class="card-description">
       {{ descripcion }}
     </p>
   </div>
-  <div class="card-body row justify-content-md-center">
-    <div class="col-10 monto-recaudado d-flex justify-content-between">
-      <img
-        class="monto-recaudado__imagen"
-        src="../../../../assets/recaudacion 9.png"
-        alt=""
-      />
-      <div class="row objetivo">
-        <p class="progreso-numeros">RECAUDAD0 HASTA EL MOMENTO</p>
-        <span class="progreso-numeros"
-          ><b> ${{ recaudado }}</b></span
-        >
-      </div>
+
+  <div class="footer-card">
+    <p class="progreso-titulo">RECAUDAD0 HASTA EL MOMENTO</p>
+    <span class="progreso-monto"> ${{ recaudado }}</span>
+    <div class="card-body botones d-flex justify-content-center">
+      <button class="boton-masInfo">+ info</button>
+      <button class="boton-opcion">QUIERO SUSCRIBIRME</button>
     </div>
-  </div>
-  <div class="card-body botones d-flex justify-content-center">
-    <button class="col-4 botton-masInfo">+ INFO</button>
-    <button class="col-6 boton-opcion">Quiero Suscribirme</button>
   </div>
 </div>
