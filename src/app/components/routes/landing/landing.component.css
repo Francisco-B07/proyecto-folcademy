@@ -1,6 +1,6 @@
 .landing {
   margin: 172px auto 0px;
-  padding: 0px 82px;
+  padding-left: 30px;
 }
 .titulo-landing {
   font-family: "Montserrat";
@@ -11,6 +11,29 @@
   text-align: center;
   letter-spacing: 0.2em;
   color: #ea138c;
+}
+.miscelanea-derecha {
+  position: relative;
+  float: right;
+  top: -20px;
+}
+.cruz-derecha {
+  top: 136px;
+  left: 70px;
+}
+.cruz-derecha-dos {
+  top: 2100px;
+  left: 40px;
+}
+.miscelanea-izquierda {
+  position: relative;
+  float: left;
+  top: 1420px;
+  left: -15px;
+}
+.cruz-izquierda {
+  top: 950px;
+  left: 95px;
 }
 .presentacion-bisblick {
   font-family: "Montserrat";
@@ -63,6 +86,10 @@
   color: #ea138c;
   text-decoration: underline;
 }
+.pagination ::ng-deep .ngx-pagination .disabled {
+  display: none !important;
+}
+
 .breadcrumb-item {
   margin-left: 26px;
   margin-top: 12px;
