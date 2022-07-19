@@ -1,26 +1,30 @@
 .navbar {
-    background-color: rgba(185, 126, 187, 0.5);
-    height: 77px;
-  }
-  .logo {
-    margin-left: 70px;
-    margin-right: 50px;
-  }
-  
-  .nav-link {
-    margin-left: 10px;
-    font-size: 14px;
-    font-family: "Dosis";
-    font-style: normal;
-    font-weight: 600;
-    color: #ea138c;
-  }
-  .nav-link:hover {
-    font-weight: bold;
-  }
-  
-  .link-proyectos {
-    font-weight: 800;
-    text-decoration: underline;
-  }
-  
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  height: 78px;
+}
+.logo {
+  margin-left: 70px;
+  margin-right: 50px;
+  width: 120px;
+  height: 37px;
+}
+
+.nav-link {
+  margin-left: 10px;
+  font-size: 14px;
+  font-family: "Dosis";
+  font-style: normal;
+  font-weight: 600;
+  color: #ea138c;
+  line-height: 23px;
+}
+.nav-link:hover {
+  font-weight: bold;
+}
+
+.link-proyectos {
+  font-weight: 800;
+  text-decoration-line: underline;
+  mix-blend-mode: normal;
+}

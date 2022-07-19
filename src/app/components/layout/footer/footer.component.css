@@ -1,28 +1,27 @@
-footer{
-    background-color: #4F2C59;
-    margin-top: 95px;
-    padding-bottom: 5px;
+footer {
+  background-color: #4f2c59;
+  padding-bottom: 5px;
 }
-p{
-    color: white;
-    margin-bottom: 15px;
-    padding-top: 10px;
-    padding-left: 15px;
+p {
+  color: white;
+  margin-bottom: 15px;
+  padding-top: 10px;
+  padding-left: 15px;
 }
-.contactos{
-    display: inline-block;
-    margin: 0 5px;
-    text-align: center;
+.contactos {
+  display: inline-block;
+  margin: 0 5px;
+  text-align: center;
 }
-.contenedor{
-    height: 40px;
+.contenedor {
+  height: 40px;
 }
-ul{
-    padding-top: 10px;
-    padding-right: 15px;
+ul {
+  padding-top: 10px;
+  padding-right: 15px;
 }
 .header__red-bisblik {
-    margin-right: 11px;
-    height: 15px;
-    width: 15px;
-  }
+  margin-right: 11px;
+  height: 15px;
+  width: 15px;
+}
