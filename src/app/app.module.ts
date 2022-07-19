@@ -7,6 +7,7 @@ import { LayoutModule } from './components/layout/layout.module';
 import { RoutesModule } from './components/routes/routes.module';
 import { SharedModule } from './components/shared/shared.module';
 import { RouterModule } from '@angular/router';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 @NgModule({
   declarations: [AppComponent],
@@ -18,6 +19,7 @@ import { RouterModule } from '@angular/router';
     RoutesModule,
     SharedModule,
     RouterModule,
+    ModalModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent],
