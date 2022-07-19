@@ -1,0 +1,48 @@
+.miga-de-pan{
+    color: #555555;
+    font-size: 15px;
+  }
+  .contenedor{
+    margin-top: 50px;
+  }
+  .cambio{  
+    height: 567px;
+    width: 397px;
+    border: solid 1px;
+    background-color: #FDF8F8;
+    border-color: #EA138C;
+  }
+ .imagen{
+    width: 249px;
+    height: 77px;
+ }
+ input{
+    background-color: #FDF8F8;
+    width: 322px;
+    height: 34px;
+   
+    border-radius: 1px;
+    border: #EA138C solid 2px
+  }
+  .input::placeholder{
+    text-align: center;
+    color: #555555;
+    font-size: 20px;
+  }
+  button{
+    width: 256px;
+    height: 34px;
+    background-color: #EA138C;
+    color: white;
+    margin-left: 70px;
+    font-weight: 500;
+    font-size: 26px;
+  }
+.cancelar{
+    width: 256px;
+    background-color: #FDF8F8;
+    color: #EA138C;
+    margin-left: 70px;
+    font-weight: 700;
+    font-size: 24px;
+}

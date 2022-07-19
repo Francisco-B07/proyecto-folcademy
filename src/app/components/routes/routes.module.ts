@@ -11,13 +11,11 @@ import { ProyectosAdminComponent } from './proyectos-admin/proyectos-admin.compo
 import { SharedModule } from '../shared/shared.module';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { LandingComponent } from './landing/landing.component';
-import { ProyectoComponent } from './proyecto/proyecto.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
     LandingComponent,
-    ProyectoComponent,
     LoginComponent,
     ContrasenaComponent,
     CambiarContrasenaComponent,
@@ -35,7 +33,6 @@ import { NgxPaginationModule } from 'ngx-pagination';
   ],
   exports: [
     LandingComponent,
-    ProyectoComponent,
     RecuperarContraseniaComponent,
     LoginComponent,
     ContrasenaComponent,
