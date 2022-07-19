@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -8,8 +7,6 @@ import { LayoutModule } from './components/layout/layout.module';
 import { RoutesModule } from './components/routes/routes.module';
 import { SharedModule } from './components/shared/shared.module';
 import { RouterModule } from '@angular/router';
-
-
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,7 +17,7 @@ import { RouterModule } from '@angular/router';
     LayoutModule,
     RoutesModule,
     SharedModule,
-    RouterModule
+    RouterModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

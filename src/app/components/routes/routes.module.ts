@@ -7,15 +7,15 @@ import { CambiarContrasenaComponent } from './cambiar-contrasena/cambiar-contras
 import { UsuarioAdminComponent } from './usuario-admin/usuario-admin.component';
 import { ProyectosAdminComponent } from './proyectos-admin/proyectos-admin.component';
 
-
-
 @NgModule({
-  declarations: [LoginComponent, ContrasenaComponent, CambiarContrasenaComponent, UsuarioAdminComponent, ProyectosAdminComponent],
-  imports: [
-    CommonModule,
-    RouterModule,
-
+  declarations: [
+    LoginComponent,
+    ContrasenaComponent,
+    CambiarContrasenaComponent,
+    UsuarioAdminComponent,
+    ProyectosAdminComponent,
   ],
-  exports: [LoginComponent, ContrasenaComponent]
+  imports: [CommonModule, RouterModule],
+  exports: [LoginComponent, ContrasenaComponent],
 })
 export class RoutesModule {}
