@@ -12,5 +12,6 @@ modalRef?: BsModalRef;
   ngOnInit(): void {}
   openModal(template: TemplateRef<any>) {
     this.modalRef = this.modalService.show(template);
+    this.modalRef?.hide()
   }
 }

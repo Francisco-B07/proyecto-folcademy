@@ -1,7 +1,11 @@
 .contenedor{
-    height: 606px;
-    background: rgba(254, 236, 236, 0.4);
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    width: 1060px;
+    height: 598px;
+    left: 383px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 7px rgb(0 0 0 / 25%);
+    border-radius: 4px;
 }
 .form-letra{
     -webkit-text-stroke-width:medium
@@ -13,72 +17,152 @@
     background: #FDF8F8;
     border: 2px solid #B97EBB;
     margin-top: 20px;
+    box-sizing: border-box;
+    width: 517.07px;
+    height: 45px;
+    border: 1px solid #C6C6C6;
+    border-radius: 50px;
 }
 .buscador::placeholder{
     text-align: center;
     color: rgba(133, 123, 123, 1);
-    font-size: 22px;
     background: #FDF8F8;
-    /* border: 2px solid #B97EBB; */
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 21px;
+
 }
 .boton-buscar{
-    width: 231px;
-    height: 51px;
+    width: 238px;
+    margin-left: 216px;
+    height: 43px;
     margin-top: 22px;
-    background-color: #EA138C;
     font-weight: 400;
     font-size: 27px;
     line-height: 38px;
     color: #FFFFFF;
     border-radius: 0px;
     border-style: none;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 4px 4px 4px rgb(0 0 0 / 25%);
+    background: #EA138C;
+    box-shadow: 2px 4px 4px rgb(0 0 0 / 25%);
+    border-radius: 26.5px;
+}
+.boton-buscar:hover{
+    width: 240px;
+    height: 45px;
+}
+.image{
+    width: 35px;
+    height: 35px;
+}
+.image:hover{
+    width: 37px;
+    height: 37px;
+}
+.prueba{
+    color: #000000;
+    content: "";
+    z-index: -1;
+    height: 0px;
+    border: 1px solid #F0F0F0;
+    margin-bottom: 0px;
 }
 
 .contenedor-2{
-    /* position: absolute; */
-    /* width: 414px; */
-    height: 798px;
-    background: rgba(254, 236, 236, 0.4);
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    height: 797.67px;
+    background: rgba(255, 248, 248, 0.4);
+    box-shadow: 0px 2px 7px rgb(0 0 0 / 25%);
+}
+.boton-side:hover{
+    color: #EA138C;
+    text-decoration: underline;
+    
 }
 .contenedor-2 button{
-    border: 3px solid #EA138C;
+    margin-bottom: 0px;
+    width: 323px;
+    height: 45px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 27px;
     color: #EA138C;
-    box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.25);
-    width: 268px;
-    height: 69px;
-    margin-bottom: 90px;
-    font-size: 27px;
 }
 .contenedor-3{
+    height: 63px;
     background: rgba(254, 236, 236, 0.4);
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
 }
 .cont{
-    margin-top: -117px;
+    margin-top: -98px;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 .letrero1{
     font-size: 26px;
     text-decoration: none;
-    color: #EA138C;
     margin: 0px 35px;
     padding: 6px 12px;
-    margin-top: 420px
+    margin-top: 620px;
+    margin-right: 122px;
+    margin-left: 52px;
+    margin-bottom: 28px;
+    width: 224px;
+    height: 62px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 27px;
+    color: #857B7B;
+}
+.letrero1:hover{
+    color: #EA138C;
 }
 h2{
     margin-left: 450px;
     font-weight: 700;
     font-size: 30px;
 }
+.letra-tabla{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 21px;
+    color: #383838;
+}
 .letrero{
     margin-left: 325px;
     font-size: 16px;
-    margin-bottom: 50px;
+    margin-bottom: 31px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #857B7B;
+}
+.titulo{
+    margin-left: 362px;
+    font-weight: 700;
+    font-size: 30px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 34px;
+    margin-bottom: 21px;
+    color: #383838;
 }
 .texto{
+    
+    height: 49px;
     background: #F8F0F5;
-    border: 1px solid #EA138C;
 }
 
 .letra{
@@ -88,11 +172,8 @@ h2{
     font-size: 16px;
     margin-bottom: 50px;
 }
-.texto-2{
-    background: rgba(234, 19, 140, 0.2);
-}
 .texto-1{
-    background: rgba(234, 19, 140, 0.14);
+    background: #FFFFFF;
 }
 
 .miga-de-pan{
@@ -100,7 +181,8 @@ h2{
     font-size: 15px;
   }
   .contenedor{
-    margin-top: 50px;
+    margin-top: 21px;
+    margin-left: 55px;
   }
   .cambio{  
     height: 567px;
@@ -158,12 +240,24 @@ h2{
     background: #D9D9D9;
     box-shadow: 2px 4px 4px rgb(0 0 0 / 25%);
     border-radius: 30px;
+    height: 41px;
+    width: 128px;
 }
 .boton-modal-izq{
     margin-right: 50px;
     background: #D9D9D9;
     box-shadow: 2px 4px 4px rgb(0 0 0 / 25%);
     border-radius: 30px;
+    height: 41px;
+    width: 128px;
+}
+.boton-modal:hover{
+    height: 43px;
+    width: 130px;
+}
+.boton-modal-izq:hover{
+    height: 43px;
+    width: 130px;
 }
 .letra-modal{
     font-family: 'Dosis';
@@ -172,4 +266,5 @@ h2{
     font-size: 20px;
     text-align: center;
     color: #000000;
+    
 }
