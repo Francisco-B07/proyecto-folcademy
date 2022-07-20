@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-proyectos-admin',
   templateUrl: './proyectos-admin.component.html',
-  styleUrls: ['./proyectos-admin.component.css']
+  styleUrls: ['./proyectos-admin.component.css'],
 })
 export class ProyectosAdminComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

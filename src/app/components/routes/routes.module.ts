@@ -12,6 +12,7 @@ import { SharedModule } from '../shared/shared.module';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { LandingComponent } from './landing/landing.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { LayoutModule } from '../layout/layout.module';
 
 @NgModule({
   declarations: [
@@ -30,12 +31,16 @@ import { NgxPaginationModule } from 'ngx-pagination';
     ModalModule.forRoot(),
     NgxPaginationModule,
     RouterModule,
+    LayoutModule,
   ],
   exports: [
     LandingComponent,
     RecuperarContraseniaComponent,
     LoginComponent,
     ContrasenaComponent,
+    CambiarContrasenaComponent,
+    UsuarioAdminComponent,
+    ProyectosAdminComponent,
   ],
 })
 export class RoutesModule {}
