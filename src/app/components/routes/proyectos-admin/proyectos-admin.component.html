@@ -72,17 +72,17 @@
             </tr>
           </thead>
           <div class="separacion-datos"></div>
-          <tbody class="contenido-tabla">
+          <tbody class="informacion-tabla">
             <tr
               *ngFor="
                 let proyecto of proyectos
                   | paginate: { itemsPerPage: 6, currentPage: pageActual }
               "
             >
-              <td class="contenido separar">{{ proyecto.nombre }}</td>
-              <td class="contenido">{{ proyecto.tipoDeProyecto }}</td>
-              <td class="contenido">{{ proyecto.fechaDeInicio }}</td>
-              <td class="contenido">{{ proyecto.fechaDeFin }}</td>
+              <td class="contenido-tabla separar">{{ proyecto.nombre }}</td>
+              <td class="contenido-tabla">{{ proyecto.tipoDeProyecto }}</td>
+              <td class="contenido-tabla">{{ proyecto.fechaDeInicio }}</td>
+              <td class="contenido-tabla">{{ proyecto.fechaDeFin }}</td>
               <td class="d-flex justify-content-around grupo-de-iconos">
                 <div class="iconos icono-separacion">
                   <img
