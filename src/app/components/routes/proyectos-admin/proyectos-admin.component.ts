@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProyectosAdminComponent implements OnInit {
   pageActual: number = 1;
-  opcion: string = '';
+  opcion: string = 'proyectos';
   toSearch = '';
 
   seleccionoOpcion(opcion: string) {
