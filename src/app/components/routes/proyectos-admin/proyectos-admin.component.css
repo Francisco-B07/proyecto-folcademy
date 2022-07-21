@@ -2,3 +2,53 @@
   height: calc(100vh - 151px);
   margin-top: 106px;
 }
+
+/* Migas de pan */
+.migas-de-pan {
+  margin-top: 40px;
+}
+.breadcrumb-item {
+  margin-left: 26px;
+  margin-top: 12px;
+}
+.flecha-atras {
+  margin-top: -5px;
+}
+.nav-link {
+  padding: 8px 4px;
+
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #857b7b !important;
+}
+.link-proyectos {
+  text-decoration: underline;
+  color: #857b7b !important;
+  padding-left: 0;
+}
+
+.titulo {
+  margin: 17px 0 0 73px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 37px;
+  color: #383838;
+}
+.contenedor-listado-proyectos {
+  margin-top: 9px;
+  width: calc(100vw - 328px);
+}
+
+/* Listado de proyectos */
+.proyectos-admin__listado {
+  width: calc(100vw - 450px);
+  height: calc(100vh - 343px);
+  background: #ffffff;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+}

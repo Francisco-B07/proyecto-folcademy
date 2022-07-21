@@ -1,4 +1,25 @@
 <div class="d-flex">
   <app-sidenav></app-sidenav>
-  <div class="proyectos-admin"></div>
+  <div class="proyectos-admin">
+    <div class="migas-de-pan">
+      <ul class="breadcrumb">
+        <li class="breadcrumb-item d-flex">
+          <a class="nav-link" routerLink="/admin">
+            <img
+              class="flecha-atras"
+              href="https://www.bisblick.org/quienes-somos/"
+              src="../../../../assets/Arrow left short.svg"
+              alt=""
+            />
+          </a>
+          <a class="nav-link" routerLink="/admin">Inicio de Sesión/</a>
+          <span class="nav-link link-proyectos">Proyectos</span>
+        </li>
+      </ul>
+    </div>
+    <h2 class="titulo">PROYECTOS</h2>
+    <div class="contenedor-listado-proyectos d-flex justify-content-center">
+      <div class="proyectos-admin__listado"></div>
+    </div>
+  </div>
 </div>

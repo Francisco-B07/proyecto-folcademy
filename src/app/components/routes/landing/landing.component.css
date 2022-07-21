@@ -28,11 +28,11 @@
 .miscelanea-izquierda {
   position: relative;
   float: left;
-  top: 1420px;
+  top: 940px;
   left: -15px;
 }
 .cruz-izquierda {
-  top: 950px;
+  top: 750px;
   left: 95px;
 }
 .presentacion-bisblick {
@@ -90,7 +90,7 @@
   display: none !important;
 }
 
-.breadcrumb-item {
+/* .breadcrumb-item {
   margin-left: 26px;
   margin-top: 12px;
 }
@@ -107,7 +107,7 @@
   text-decoration: underline;
   color: #857b7b !important;
   padding-left: 0;
-}
+} */
 .impacto {
   padding: 54px 180px 100px 180px;
   width: 100%;
