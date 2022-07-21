@@ -13,6 +13,7 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { LandingComponent } from './landing/landing.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { LayoutModule } from '../layout/layout.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { LayoutModule } from '../layout/layout.module';
     NgxPaginationModule,
     RouterModule,
     LayoutModule,
+    FormsModule,
   ],
   exports: [
     LandingComponent,

@@ -5,7 +5,7 @@
 
 /* Migas de pan */
 .migas-de-pan {
-  margin-top: 40px;
+  /* margin-top: 20px; */
 }
 .breadcrumb-item {
   margin-left: 26px;
@@ -31,7 +31,7 @@
 }
 
 .titulo {
-  margin: 17px 0 0 73px;
+  margin-left: 73px;
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
@@ -47,8 +47,145 @@
 /* Listado de proyectos */
 .proyectos-admin__listado {
   width: calc(100vw - 450px);
-  height: calc(100vh - 343px);
+  height: calc(100vh - 316px);
   background: #ffffff;
   box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.25);
   border-radius: 4px;
+}
+.proyectos-admin__cabecera {
+  padding: 0 64px 0 24px;
+  padding-right: 64px;
+  height: 105px;
+}
+.buscador__input {
+  width: 517px;
+  height: 45px;
+  border: 1px solid #c6c6c6;
+  border-radius: 50px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  padding: 0 25px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 21px;
+  color: #857b7b;
+}
+
+.buscador__input::placeholder {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 21px;
+
+  color: #857b7b;
+  padding: 0px 38px;
+  background-image: url(../../../../assets/Search.svg);
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+}
+.boton-crear {
+  background: #ea138c;
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 26.5px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  width: 238px;
+  height: 43px;
+  border: none;
+}
+
+.boton-crear:hover {
+  width: 240px;
+  height: 45px;
+  margin-top: -1px;
+}
+
+tbody {
+  color: transparent;
+}
+
+.grupo-de-iconos {
+  margin-right: 26px;
+}
+.cabecera-tabla {
+  background: rgba(254, 236, 236, 0.4);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 21px;
+  color: #383838;
+  /* border: none; */
+}
+.separacion-datos {
+  height: 20px;
+}
+
+.separar {
+  padding-left: 42px;
+  border: transparent;
+}
+.contenido {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 21px;
+
+  color: #383838;
+}
+.filas-impares tbody tr:nth-of-type(odd) {
+  background-color: #f8f0f5;
+}
+.iconos {
+  width: 20px;
+  height: 25px;
+}
+.icono {
+  width: 18px;
+  height: 23px;
+  cursor: pointer;
+}
+.icono:hover {
+  width: 20px;
+  height: 25px;
+}
+.icono-separacion {
+  margin-right: 30px;
+}
+.navegador {
+  margin-top: 10px;
+}
+.pagination ::ng-deep .ngx-pagination {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  background-color: white !important;
+  color: #8b8b8b;
+}
+.pagination ::ng-deep .ngx-pagination .current {
+  background-color: white !important;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: #ea138c;
+  text-decoration: underline;
+}
+.pagination ::ng-deep .ngx-pagination .disabled {
+  display: none !important;
 }
