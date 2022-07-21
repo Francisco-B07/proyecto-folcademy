@@ -53,6 +53,7 @@
 .boton-buscar:hover{
     width: 240px;
     height: 45px;
+    border: none;
 }
 .image{
     width: 35px;
@@ -61,6 +62,7 @@
 .image:hover{
     width: 37px;
     height: 37px;
+    border: transparent;
 }
 .prueba{
     color: #000000;

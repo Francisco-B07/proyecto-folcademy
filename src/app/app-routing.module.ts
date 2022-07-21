@@ -5,11 +5,10 @@ import { ContrasenaComponent } from './components/routes/contrasena/contrasena.c
 import { CambiarContrasenaComponent } from './components/routes/cambiar-contrasena/cambiar-contrasena.component';
 import { UsuarioAdminComponent } from './components/routes/usuario-admin/usuario-admin.component';
 import { ProyectosAdminComponent } from './components/routes/proyectos-admin/proyectos-admin.component';
-import { RecuperarContraseniaComponent } from './components/routes/recuperar-contrasenia/recuperar-contrasenia.component';
-import { CrearUsuarioComponent } from './components/routes/crear-usuario/crear-usuario.component';
 import { LandingComponent } from './components/routes/landing/landing.component';
 import { EditarUsuarioComponent } from './components/routes/editar-usuario/editar-usuario.component';
-
+import { CrearUsuarioComponent } from './components/routes/crear-usuario/crear-usuario.component';
+import { RecuperarContraseniaComponent } from './components/routes/recuperar-contrasenia/recuperar-contrasenia.component';
 
 const routes: Routes = [
   {
