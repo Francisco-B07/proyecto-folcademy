@@ -1,5 +1,34 @@
 <div class="d-flex">
-  <app-sidenav></app-sidenav>
+  <div class="d-flex flex-column sidenav justify-content-between">
+    <div class="contenido">
+      <button
+        class="opcion"
+        (click)="seleccionoOpcion('usuarios')"
+        [ngClass]="opcion == 'usuarios' ? 'opcion-seleccionada' : ''"
+        routerLink="/usuario-admin"
+      >
+        Usuarios
+      </button>
+      <div class="linea"></div>
+      <button
+        class="opcion"
+        (click)="seleccionoOpcion('proyectos')"
+        [ngClass]="opcion == 'proyectos' ? 'opcion-seleccionada' : ''"
+        routerLink="/proyectos-admin"
+      >
+        Proyectos
+      </button>
+      <div class="linea"></div>
+    </div>
+    <div class="cerrar-sesion">
+      <img
+        class="cerrar-sesion__imagen"
+        src="../../../../assets/Power.svg"
+        alt=""
+      />
+      <button class="cerrar-sesion__opcion">Cerrar Sesión</button>
+    </div>
+  </div>
   <div class="proyectos-admin">
     <div class="migas-de-pan">
       <ul class="breadcrumb">

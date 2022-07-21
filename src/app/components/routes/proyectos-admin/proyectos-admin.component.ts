@@ -7,8 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProyectosAdminComponent implements OnInit {
   pageActual: number = 1;
-
+  opcion: string = '';
   toSearch = '';
+
+  seleccionoOpcion(opcion: string) {
+    this.opcion = opcion;
+  }
   proyectos: any[] = [
     {
       nombre: 'Crowfunding',
