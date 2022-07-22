@@ -6,32 +6,48 @@ import { CambiarContrasenaComponent } from './components/routes/cambiar-contrase
 import { UsuarioAdminComponent } from './components/routes/usuario-admin/usuario-admin.component';
 import { ProyectosAdminComponent } from './components/routes/proyectos-admin/proyectos-admin.component';
 import { LandingComponent } from './components/routes/landing/landing.component';
+import { EditarUsuarioComponent } from './components/routes/editar-usuario/editar-usuario.component';
+import { CrearUsuarioComponent } from './components/routes/crear-usuario/crear-usuario.component';
+import { RecuperarContraseniaComponent } from './components/routes/recuperar-contrasenia/recuperar-contrasenia.component';
 
 const routes: Routes = [
   {
-    path: '',
-    component: LandingComponent,
-  },
-  {
-    path: 'admin',
-    component: LoginComponent,
-  },
-  {
-    path: 'contraseña',
-    component: ContrasenaComponent,
-  },
-  {
-    path: 'cambio-contraseña',
-    component: CambiarContrasenaComponent,
-  },
-  {
-    path: 'usuario-admin',
-    component: UsuarioAdminComponent,
-  },
-  {
-    path: 'proyectos-admin',
-    component: ProyectosAdminComponent,
-  },
+  path: 'login',
+  component: LoginComponent,
+},
+{
+  path: 'contraseña',
+  component: ContrasenaComponent
+},
+{
+  path: 'cambio-contraseña',
+  component: CambiarContrasenaComponent
+},
+{
+  path: 'usuario-admin',
+  component: UsuarioAdminComponent
+},
+{
+  path: 'proyectos-admin',
+  component: ProyectosAdminComponent
+},
+{
+  path: 'recuperar-contraseña',
+  component: RecuperarContraseniaComponent
+},
+{
+  path: 'crear-usuario',
+  component: CrearUsuarioComponent
+},
+{
+  path: '',
+  component: LandingComponent
+},
+{
+  path: 'editar-usuario',
+  component: EditarUsuarioComponent
+}
+
 ];
 
 @NgModule({
