@@ -198,6 +198,7 @@ tbody {
 }
 .separacion-datos {
   height: 20px;
+  border: none;
 }
 
 .separar {
