@@ -14,54 +14,54 @@ export class ProyectosAdminComponent implements OnInit {
     this.opcion = opcion;
   }
   proyectos: any[] = [
-    {
-      nombre: 'Crowfunding',
-      tipoDeProyecto: 'Suscripcion',
-      fechaDeInicio: '24/5/2022',
-      fechaDeFin: '24/5/2023',
-    },
-    {
-      nombre: 'Proyecto donar',
-      tipoDeProyecto: 'Donar',
-      fechaDeInicio: '24/5/2022',
-      fechaDeFin: '24/5/2023',
-    },
-    {
-      nombre: 'Proyecto Participar',
-      tipoDeProyecto: 'Participar',
-      fechaDeInicio: '24/5/2022',
-      fechaDeFin: '24/5/2023',
-    },
-    {
-      nombre: 'Proyecto Participar',
-      tipoDeProyecto: 'Participar',
-      fechaDeInicio: '24/5/2022',
-      fechaDeFin: '24/5/2023',
-    },
-    {
-      nombre: 'Proyecto Participar',
-      tipoDeProyecto: 'Participar',
-      fechaDeInicio: '24/5/2022',
-      fechaDeFin: '24/5/2023',
-    },
-    {
-      nombre: 'Proyecto Participar',
-      tipoDeProyecto: 'Participar',
-      fechaDeInicio: '24/5/2022',
-      fechaDeFin: '24/5/2023',
-    },
-    {
-      nombre: 'Proyecto Participar',
-      tipoDeProyecto: 'Participar',
-      fechaDeInicio: '24/5/2022',
-      fechaDeFin: '24/5/2023',
-    },
-    {
-      nombre: 'Proyecto Participar',
-      tipoDeProyecto: 'Participar',
-      fechaDeInicio: '24/5/2022',
-      fechaDeFin: '24/5/2023',
-    },
+    // {
+    //   nombre: 'Crowfunding',
+    //   tipoDeProyecto: 'Suscripcion',
+    //   fechaDeInicio: '24/5/2022',
+    //   fechaDeFin: '24/5/2023',
+    // },
+    // {
+    //   nombre: 'Proyecto donar',
+    //   tipoDeProyecto: 'Donar',
+    //   fechaDeInicio: '24/5/2022',
+    //   fechaDeFin: '24/5/2023',
+    // },
+    // {
+    //   nombre: 'Proyecto Participar',
+    //   tipoDeProyecto: 'Participar',
+    //   fechaDeInicio: '24/5/2022',
+    //   fechaDeFin: '24/5/2023',
+    // },
+    // {
+    //   nombre: 'Proyecto Participar',
+    //   tipoDeProyecto: 'Participar',
+    //   fechaDeInicio: '24/5/2022',
+    //   fechaDeFin: '24/5/2023',
+    // },
+    // {
+    //   nombre: 'Proyecto Participar',
+    //   tipoDeProyecto: 'Participar',
+    //   fechaDeInicio: '24/5/2022',
+    //   fechaDeFin: '24/5/2023',
+    // },
+    // {
+    //   nombre: 'Proyecto Participar',
+    //   tipoDeProyecto: 'Participar',
+    //   fechaDeInicio: '24/5/2022',
+    //   fechaDeFin: '24/5/2023',
+    // },
+    // {
+    //   nombre: 'Proyecto Participar',
+    //   tipoDeProyecto: 'Participar',
+    //   fechaDeInicio: '24/5/2022',
+    //   fechaDeFin: '24/5/2023',
+    // },
+    // {
+    //   nombre: 'Proyecto Participar',
+    //   tipoDeProyecto: 'Participar',
+    //   fechaDeInicio: '24/5/2022',
+    //   fechaDeFin: '24/5/2023',
+    // },
   ];
   encountered: any[] = [];
   constructor() {}

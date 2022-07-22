@@ -61,7 +61,18 @@
           />
           <button class="boton-crear">+ Crear Proyecto</button>
         </div>
-        <table class="table filas-impares">
+        <!-- <div class="d-flex justify-content-center align-items-center">
+          <img
+            class="imagen-sin-proyectos"
+            *ngIf="proyectos.length == 0"
+            src="../../../../assets/Component 78.png"
+            alt=""
+          />
+        </div> -->
+        <h5 *ngIf="proyectos.length == 0" class="mensaje-no-hay-proyectos">
+          NO HAY PROYECTOS CREADOS EN ESTE MOMENTO
+        </h5>
+        <table *ngIf="proyectos.length > 0" class="table filas-impares">
           <thead class="cabecera-tabla">
             <tr>
               <th class="separar">NOMBRE</th>

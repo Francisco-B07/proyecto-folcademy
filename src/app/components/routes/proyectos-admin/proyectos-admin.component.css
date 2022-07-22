@@ -260,3 +260,18 @@ tbody {
 .pagination ::ng-deep .ngx-pagination .disabled {
   display: none !important;
 }
+.imagen-sin-proyectos {
+  width: 360px;
+  height: 213px;
+}
+.mensaje-no-hay-proyectos {
+  margin-top: 20px;
+  margin-left: 30px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 21px;
+
+  color: #383838;
+}

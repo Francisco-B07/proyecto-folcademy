@@ -57,6 +57,11 @@
 
 .landing__contenedor {
 }
+.imagen-sin-proyectos {
+  margin: 140px 0;
+  width: 721px;
+  height: 426px;
+}
 .card {
   display: flex;
   align-items: center;

@@ -53,6 +53,12 @@
     </p>
   </div>
   <div class="cards row row-cols-2 landing__contenedor">
+    <img
+      class="imagen-sin-proyectos"
+      *ngIf="proyectos.length == 0"
+      src="../../../../assets/Component 78.png"
+      alt=""
+    />
     <div
       *ngFor="
         let proyecto of proyectos
