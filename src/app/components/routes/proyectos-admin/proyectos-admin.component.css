@@ -265,13 +265,13 @@ tbody {
   height: 213px;
 }
 .mensaje-no-hay-proyectos {
-  margin-top: 20px;
+  margin-top: 40px;
   margin-left: 30px;
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
-  font-size: 17px;
+  font-size: 20px;
   line-height: 21px;
-
+  text-align: center;
   color: #383838;
 }
