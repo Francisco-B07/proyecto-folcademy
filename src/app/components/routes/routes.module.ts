@@ -14,6 +14,7 @@ import { LandingComponent } from './landing/landing.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { LayoutModule } from '../layout/layout.module';
 import { FormsModule } from '@angular/forms';
+import { ErrorNotFoundComponent } from './error-not-found/error-not-found.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { FormsModule } from '@angular/forms';
     UsuarioAdminComponent,
     ProyectosAdminComponent,
     RecuperarContraseniaComponent,
+    ErrorNotFoundComponent,
   ],
   imports: [
     CommonModule,

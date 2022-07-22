@@ -6,6 +6,7 @@ import { CambiarContrasenaComponent } from './components/routes/cambiar-contrase
 import { UsuarioAdminComponent } from './components/routes/usuario-admin/usuario-admin.component';
 import { ProyectosAdminComponent } from './components/routes/proyectos-admin/proyectos-admin.component';
 import { LandingComponent } from './components/routes/landing/landing.component';
+import { ErrorNotFoundComponent } from './components/routes/error-not-found/error-not-found.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: 'proyectos-admin',
     component: ProyectosAdminComponent,
+  },
+  {
+    path: 'not-found',
+    component: ErrorNotFoundComponent,
   },
   {
     path: '**',
