@@ -32,6 +32,10 @@ const routes: Routes = [
     path: 'proyectos-admin',
     component: ProyectosAdminComponent,
   },
+  {
+    path: '**',
+    redirectTo: '',
+  },
 ];
 
 @NgModule({

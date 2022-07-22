@@ -4,6 +4,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
+import { AppRoutingModule } from 'src/app/app-routing.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,7 @@ import { SidenavComponent } from './sidenav/sidenav.component';
     NavbarComponent,
     SidenavComponent,
   ],
-  imports: [CommonModule],
+  imports: [CommonModule, AppRoutingModule],
   exports: [HeaderComponent, FooterComponent, SidenavComponent],
 })
 export class LayoutModule {}

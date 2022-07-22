@@ -8,6 +8,7 @@
   margin-right: 50px;
   width: 120px;
   height: 37px;
+  cursor: pointer;
 }
 
 .nav-link {
@@ -18,9 +19,6 @@
   font-weight: 600;
   color: #ea138c;
   line-height: 23px;
-}
-.nav-link:hover {
-  font-weight: bold;
 }
 
 .link-proyectos {
