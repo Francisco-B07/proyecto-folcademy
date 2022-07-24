@@ -1,11 +1,15 @@
+/* Aplico zoom del 90% a la pantalla */
+.pantalla-listado-proyectos {
+  zoom: 0.9;
+}
+
 /* sidenav */
 .sidenav {
   padding-bottom: 28px;
   position: relative;
   z-index: 1;
   width: 328px;
-  height: calc(100vh - 78px);
-  /* height: calc(100vh - 125px); */
+  height: calc(100vh - 41px);
   left: 0px;
   top: 106px;
   background: rgba(255, 248, 248, 0.4);
@@ -67,13 +71,13 @@
 }
 
 .proyectos-admin {
-  height: calc(100vh - 78px);
+  min-height: calc(100vh - 78px);
   margin-top: 106px;
 }
 
 /* Migas de pan */
 .migas-de-pan {
-  /* margin-top: 20px; */
+  margin-top: 15px;
 }
 .breadcrumb-item {
   margin-left: 26px;
@@ -116,7 +120,7 @@
 /* Listado de proyectos */
 .proyectos-admin__listado {
   width: calc(100vw - 350px);
-  height: calc(100vh - 243px);
+  min-height: calc(100vh - 230px);
 
   background: #ffffff;
   box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.25);
@@ -197,7 +201,7 @@ tbody {
   /* border: none; */
 }
 .separacion-datos {
-  height: 20px;
+  height: 15px;
   border: none;
 }
 
