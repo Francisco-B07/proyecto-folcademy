@@ -1,0 +1,28 @@
+<div class="d-flex flex-column sidenav justify-content-between">
+  <div class="contenido">
+    <button
+      class="opcion"
+      (click)="seleccionoOpcion('usuarios')"
+      [ngClass]="pantalla == 'usuarios' ? 'opcion-seleccionada' : ''"
+    >
+      Usuarios
+    </button>
+    <div class="linea"></div>
+    <button
+      class="opcion"
+      (click)="seleccionoOpcion('proyectos')"
+      [ngClass]="pantalla == 'proyectos' ? 'opcion-seleccionada' : ''"
+    >
+      Proyectos
+    </button>
+    <div class="linea"></div>
+  </div>
+  <div class="cerrar-sesion">
+    <img
+      class="cerrar-sesion__imagen"
+      src="../../../../assets/Power.svg"
+      alt=""
+    />
+    <button class="cerrar-sesion__opcion">Cerrar Sesión</button>
+  </div>
+</div>

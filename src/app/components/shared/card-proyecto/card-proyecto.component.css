@@ -57,7 +57,6 @@
   font-weight: 500;
   font-size: 15px;
   line-height: 18px;
-  text-align: justify;
   color: #8b8b8b;
   mix-blend-mode: darken;
   overflow: auto;
@@ -99,7 +98,6 @@
   margin-top: 22px;
   padding: 0;
   height: 16px;
-  border: 1px solid #000000;
 
   font-family: "Montserrat";
   font-style: normal;

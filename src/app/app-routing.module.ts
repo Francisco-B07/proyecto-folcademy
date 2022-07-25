@@ -9,45 +9,53 @@ import { LandingComponent } from './components/routes/landing/landing.component'
 import { EditarUsuarioComponent } from './components/routes/editar-usuario/editar-usuario.component';
 import { CrearUsuarioComponent } from './components/routes/crear-usuario/crear-usuario.component';
 import { RecuperarContraseniaComponent } from './components/routes/recuperar-contrasenia/recuperar-contrasenia.component';
+import { ErrorNotFoundComponent } from './components/routes/error-not-found/error-not-found.component';
 
 const routes: Routes = [
   {
-  path: 'login',
-  component: LoginComponent,
-},
-{
-  path: 'contraseña',
-  component: ContrasenaComponent
-},
-{
-  path: 'cambio-contraseña',
-  component: CambiarContrasenaComponent
-},
-{
-  path: 'usuario-admin',
-  component: UsuarioAdminComponent
-},
-{
-  path: 'proyectos-admin',
-  component: ProyectosAdminComponent
-},
-{
-  path: 'recuperar-contraseña',
-  component: RecuperarContraseniaComponent
-},
-{
-  path: 'crear-usuario',
-  component: CrearUsuarioComponent
-},
-{
-  path: '',
-  component: LandingComponent
-},
-{
-  path: 'editar-usuario',
-  component: EditarUsuarioComponent
-}
-
+    path: 'login',
+    component: LoginComponent,
+  },
+  {
+    path: 'contraseña',
+    component: ContrasenaComponent,
+  },
+  {
+    path: 'cambio-contraseña',
+    component: CambiarContrasenaComponent,
+  },
+  {
+    path: 'usuario-admin',
+    component: UsuarioAdminComponent,
+  },
+  {
+    path: 'proyectos-admin',
+    component: ProyectosAdminComponent,
+  },
+  {
+    path: 'recuperar-contraseña',
+    component: RecuperarContraseniaComponent,
+  },
+  {
+    path: 'crear-usuario',
+    component: CrearUsuarioComponent,
+  },
+  {
+    path: '',
+    component: LandingComponent,
+  },
+  {
+    path: 'editar-usuario',
+    component: EditarUsuarioComponent,
+  },
+  {
+    path: 'not-found',
+    component: ErrorNotFoundComponent,
+  },
+  {
+    path: '**',
+    redirectTo: '',
+  },
 ];
 
 @NgModule({
