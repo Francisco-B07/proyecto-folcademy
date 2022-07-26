@@ -1,35 +1,48 @@
 /* .recuperar-contrasenia {
   margin-top: 40px;
 } */
-
+.seccion{
+  margin-top: 90px;
+}
 .titulo {
   margin-top: 42px;
   text-align: center;
-  margin-bottom: 14px;
-  font-family: "Dosis";
+  margin-bottom: 50px;
+  margin-left: 50px;
+  width: 313px;
+  height: 30px;
+  font-family: 'Montserrat';
   font-style: normal;
-  font-weight: 600;
-  font-size: 36px;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
   color: #333333;
 }
+.imagen{
+width: 237px;
+height: 73px;
+margin-top: 30px;
+}
 .recuperar-contrasenia__input {
-  width: 397px;
-  height: 370px;
-  background-color: #fdf8f8;
-  border: 1px solid #ea138c;
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   margin-bottom: 10px;
+  box-sizing: border-box;
+  width: 411px;
+  height: 474px;
+  background: #FDF8F8;
+  border: 1px solid #857B7B;
+  border-radius: 6px;
 }
 .texto {
   margin-top: 53px;
   width: 263px;
   height: 64px;
-  font-family: "Dosis";
+  font-family: 'Montserrat';
   font-style: normal;
-  font-weight: 500;
-  font-size: 27px;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 30px;
   text-align: center;
-  color: #403a3a;
+  color: #403A3A;
 }
 
 .contenedor-input {
@@ -37,28 +50,34 @@
 }
 .input {
   padding: 10px;
+  box-sizing: border-box;
   width: 236px;
   height: 47px;
-  background-color: #eaeaea;
-  border: 5px solid #ea138c;
-  box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.25);
+  background: #EAEAEA;
+  border: 1px solid #857B7B;
 }
 .input::placeholder {
   text-align: center;
 }
 .boton {
-  margin-top: 62px;
-  width: 256px;
-  height: 34px;
-  background: #ea138c;
-  box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.25);
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 19px;
-  color: #fdf8f8;
+  margin-top: 67px;
+  margin-bottom: 75px;
   border: none;
+  width: 293px;
+  height: 37.4px;
+  background: #EA138C;
+  box-shadow: 2px 4px 4px rgb(0 0 0 / 25%);
+  border-radius: 26.5px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #FFFFFF;
+}
+.boton:hover{
+  width: 295px;
+  height: 39.4px;
 }
 .texto-modal {
   height: 112px;

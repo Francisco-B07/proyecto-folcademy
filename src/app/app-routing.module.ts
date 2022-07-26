@@ -9,6 +9,7 @@ import { LandingComponent } from './components/routes/landing/landing.component'
 import { EditarUsuarioComponent } from './components/routes/editar-usuario/editar-usuario.component';
 import { CrearUsuarioComponent } from './components/routes/crear-usuario/crear-usuario.component';
 import { RecuperarContraseniaComponent } from './components/routes/recuperar-contrasenia/recuperar-contrasenia.component';
+import { AuthGuard } from '../../guard/auth.guard';
 
 const routes: Routes = [
   {
@@ -25,6 +26,7 @@ const routes: Routes = [
 },
 {
   path: 'usuario-admin',
+  canActivate: [AuthGuard],
   component: UsuarioAdminComponent
 },
 {

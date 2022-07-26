@@ -12,6 +12,7 @@ import { SharedModule } from '../shared/shared.module';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { LandingComponent } from './landing/landing.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
     ModalModule.forRoot(),
     NgxPaginationModule,
     RouterModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     LandingComponent,

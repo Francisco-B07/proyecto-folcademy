@@ -3,26 +3,25 @@
     font-size: 15px;
   }
   .contenedor{
-    margin-top: 50px;
+    margin-top: 110px;
   }
   .cambio{  
     height: 425px;
-    width: 397px;
-    border: solid 1px;
-    background-color: #FDF8F8;
-    border-color: #EA138C;
+    box-sizing: border-box;
+    width: 482px;
+    background: #FFFFFF;
+    border: 1px solid #857B7B;
+    box-shadow: 0px 2px 7px rgb(0 0 0 / 20%);
   }
  .imagen{
     width: 249px;
     height: 77px;
  }
  input{
-    background-color: #FDF8F8;
-    width: 322px;
-    height: 34px;
-   
-    border-radius: 1px;
-    border: #EA138C solid 2px
+  border-radius: 1px;
+  border: #857B7B solid 1px;
+  width: 340px;
+  height: 39.23px;
   }
   .input::placeholder{
     text-align: center;
@@ -30,9 +29,16 @@
     font-size: 20px;
   }
   button{
-    width: 256px;
-    height: 34px;
-    background-color: #EA138C;
     color: white;
-    margin-left: 70px;
+    width: 350px;
+    height: 43px;
+    background: #EA138C;
+    box-shadow: 2px 4px 4px rgb(0 0 0 / 25%);
+    border-radius: 26.5px;
+  }
+  button:hover{
+    width: 352px;
+    height: 45px;
+    background: #EA138C;
+    color: white;
   }

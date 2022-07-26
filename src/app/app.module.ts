@@ -11,6 +11,7 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import { SharedModule } from './components/shared/shared.module';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { RoutesModule } from './components/routes/routes.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent],
@@ -25,6 +26,8 @@ import { RoutesModule } from './components/routes/routes.module';
     CarouselModule.forRoot(),
     ModalModule.forRoot(),
     NgxPaginationModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent],
