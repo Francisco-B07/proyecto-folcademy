@@ -1,7 +1,17 @@
-import { Component, OnInit, TemplateRef } from '@angular/core';
+import {
+  ChangeDetectorRef,
+  Component,
+  Input,
+  OnInit,
+  TemplateRef,
+} from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { response } from 'express';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { Usuario } from 'src/app/interfaces/usuario';
+import { RecuperarIdService } from 'src/app/services/recuperar-id.service';
+import { UsuarioService } from 'src/app/services/usuario.service';
 @Component({
   selector: 'app-usuario-admin',
   templateUrl: './usuario-admin.component.html',
@@ -10,7 +20,6 @@ import { Usuario } from 'src/app/interfaces/usuario';
 export class UsuarioAdminComponent implements OnInit {
   modalRef?: BsModalRef;
   message?: string;
-
   bsModalRef?: BsModalRef;
   confirmModalRef?: BsModalRef;
   confirmResolve?: () => void;
@@ -20,36 +29,53 @@ export class UsuarioAdminComponent implements OnInit {
   pageActual: number = 1;
   opcion: string = 'usuarios';
   toSearch = '';
+  id: number = 0;
+  usuarios: any[] = [];
+  encountered: any[] = [];
 
+  constructor(
+    private modalService: BsModalService,
+    private _usuarioService: UsuarioService,
+    private _idService: RecuperarIdService,
+    private cd: ChangeDetectorRef
+  ) {}
+
+  ngOnInit(): void {
+    this.obtenerUsuarios();
+    this._idService.recuperarIdObservable.subscribe((response) => {
+      this.id = response;
+    });
+    this.cd.detectChanges();
+  }
+
+  enviarId(id: number) {
+    this._idService.recuperarId(id);
+  }
   seleccionoOpcion(opcion: string) {
     this.opcion = opcion;
   }
-  usuarios: any[] = [
-    {
-      nombre: 'Crowfunding',
-      apellido: 'Suscripcion',
-      email: 'Soledadmartinez22@gmail.com',
-    },
-    {
-      nombre: 'Proyecto donar',
-      apellido: 'Donar',
-      email: 'Soledadmartinez22@gmail.com',
-    },
-    {
-      nombre: 'Proyecto Participar',
-      apellido: 'Participar',
-      email: 'Soledadmartinez22@gmail.com',
-    },
-  ];
-  encountered: any[] = [];
 
-  constructor(private modalService: BsModalService) {}
+  obtenerUsuarios() {
+    this._usuarioService.getUsuarios().subscribe((data) => {
+      console.log(data);
+      this.usuarios = data.content;
+      this.encountered = data.content;
+    });
+    this.cd.detectChanges();
+  }
+  eliminarUsuario(id: number) {
+    this._usuarioService.eliminarUsuario(id).subscribe((data) => {
+      this.obtenerUsuarios();
+    });
+  }
 
+  // FUNCIONES DEL MODAL
   openModal(template: TemplateRef<any>) {
     this.modalRef = this.modalService.show(template, { class: 'modal-sm' });
   }
 
-  confirmRemove(): void {
+  confirmRemove(id: number): void {
+    this.eliminarUsuario(id);
     this.message = 'Confirmed!';
     this.modalRef?.hide();
   }
@@ -75,6 +101,7 @@ export class UsuarioAdminComponent implements OnInit {
       ModalContentWithInterceptorComponent,
       { closeInterceptor }
     );
+
     this.bsModalRef.content.closeBtnName = 'Close';
   }
 
@@ -92,16 +119,17 @@ export class UsuarioAdminComponent implements OnInit {
     this.confirmModalRef?.hide();
   }
 
-  ngOnInit(): void {}
   search() {
+    this.encountered = this.usuarios;
+
     this.encountered = this.usuarios.filter((res) => {
-      if (res.title) {
-        return res.title
+      if (res.nombre) {
+        return res.nombre
           .toLocaleLowerCase()
           .match(this.toSearch.toLocaleLowerCase());
       }
-      if (res.name) {
-        return res.name
+      if (res.nombre) {
+        return res.nombre
           .toLocaleLowerCase()
           .match(this.toSearch.toLocaleLowerCase());
       }
@@ -196,7 +224,7 @@ export class UsuarioAdminComponent implements OnInit {
             class="boton-crear"
             (click)="crearUsuario()"
           >
-            + Crear Usuario
+            {{ textoBoton }}
           </button>
         </div>
         <div class="contenedor-boton-cancelar">
@@ -222,6 +250,7 @@ export class UsuarioAdminComponent implements OnInit {
         margin-top: 14px;
       }
       .input-modal {
+        text-align: center;
         margin-top: 35px;
         border: solid 1px #857b7b;
         width: 340px;
@@ -289,13 +318,19 @@ export class UsuarioAdminComponent implements OnInit {
     `,
   ],
 })
-export class ModalContentWithInterceptorComponent {
+export class ModalContentWithInterceptorComponent implements OnInit {
   usuarioForm: FormGroup;
-
+  usuarios: Usuario[] = [];
+  id: number = this._idService.id;
+  textoBoton: string = '+ Crear Usuario';
   constructor(
     public bsModalRef: BsModalRef,
     private fb: FormBuilder,
-    private modalService: BsModalService
+    private modalService: BsModalService,
+    private _usuarioService: UsuarioService,
+    private _idService: RecuperarIdService,
+    private cd: ChangeDetectorRef,
+    private router: Router
   ) {
     this.usuarioForm = this.fb.group({
       nombre: ['', Validators.required],
@@ -303,16 +338,58 @@ export class ModalContentWithInterceptorComponent {
       email: ['', Validators.required],
     });
   }
+  ngOnInit(): void {
+    this.resetearId();
+    this._idService.recuperarIdObservable.subscribe((response) => {
+      this.id = response;
+    });
+    if (this.id >= 0) {
+      this.textoBoton = 'Guardar';
+      this.editarUsuario(this.id);
+    }
+  }
+  obtenerUsuarios() {
+    this._usuarioService.getUsuarios().subscribe((data) => {
+      this.usuarios = data.content;
+    });
+  }
 
+  editarUsuario(id: number) {
+    this._usuarioService.obtenerUsuario(id).subscribe((data) => {
+      this.usuarioForm.setValue({
+        nombre: data.content[0].nombre,
+        apellido: data.content[0].apellido,
+        email: data.content[0].email,
+      });
+    });
+  }
+  resetearId() {
+    this._idService.recuperarId(-1);
+  }
+  refrescarPage() {
+    window.location.reload();
+  }
   crearUsuario() {
     const USUARIO: Usuario = {
       nombre: this.usuarioForm.get('nombre')?.value,
       apellido: this.usuarioForm.get('apellido')?.value,
       email: this.usuarioForm.get('email')?.value,
+      password: 'Bb123456',
+      roles: [],
     };
-    console.log(USUARIO);
-
+    if (this.id >= 0) {
+      // Editamos Usuario
+      this._usuarioService.editarUsuario(this.id, USUARIO).subscribe((data) => {
+        this.obtenerUsuarios();
+      });
+    } else {
+      // Creamos Usuario
+      this._usuarioService.crearUsuario(USUARIO).subscribe((data) => {
+        this.obtenerUsuarios();
+      });
+    }
     this.modalService._hideModal();
     this.modalService._hideBackdrop();
+    // this.modalService.hide();
   }
 }

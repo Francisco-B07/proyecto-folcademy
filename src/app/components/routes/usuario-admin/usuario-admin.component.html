@@ -100,10 +100,7 @@
           </ng-template>
         </div>
 
-        <h5 *ngIf="usuarios.length == 0" class="mensaje-no-hay-usuarios">
-          NO HAY USUARIOS CREADOS EN ESTE MOMENTO
-        </h5>
-        <table *ngIf="usuarios.length > 0" class="table filas-impares">
+        <table class="table filas-impares">
           <thead class="cabecera-tabla">
             <tr>
               <th class="separar">NOMBRE</th>
@@ -116,7 +113,7 @@
           <tbody class="informacion-tabla">
             <tr
               *ngFor="
-                let usuario of usuarios
+                let usuario of encountered
                   | paginate: { itemsPerPage: 6, currentPage: pageActual }
               "
             >
@@ -129,6 +126,8 @@
                     class="icono"
                     src="../../../../assets/pencil.svg"
                     alt=""
+                    (click)="enviarId(usuario.id)"
+                    (click)="openModalWithInterceptor(crear)"
                   />
                 </div>
                 <div class="iconos">
@@ -149,9 +148,9 @@
                             <button
                               type="button"
                               class="boton-modal-eliminar"
-                              (click)="confirmRemove()"
+                              (click)="confirmRemove(usuario.id)"
                             >
-                              Yes
+                              Si
                             </button>
                           </div>
                           <div class="contenedor-boton">
