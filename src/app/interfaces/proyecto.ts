@@ -3,7 +3,7 @@ export interface Proyecto {
   imagen: string;
   titulo: string;
   descripcion: string;
-  recaudado: number;
-  objetivo: number;
+  recaudado: string;
+  objetivo: string;
   opcion: string;
 }
