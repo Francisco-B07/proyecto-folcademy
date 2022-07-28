@@ -10,13 +10,13 @@ import { EditarUsuarioComponent } from './components/routes/editar-usuario/edita
 import { CrearUsuarioComponent } from './components/routes/crear-usuario/crear-usuario.component';
 import { RecuperarContraseniaComponent } from './components/routes/recuperar-contrasenia/recuperar-contrasenia.component';
 import { LoginComponent } from './components/routes/login/login.component';
-import { LogInComponent } from './components/routes/log-in/log-in.component';
+
 
 
 const routes: Routes = [
   {
   path: 'login',
-  component: LogInComponent,
+  component: LoginComponent,
 },
 
 {
