@@ -70,7 +70,7 @@ export class UsuarioAdminComponent implements OnInit {
     });
     Swal.fire({
       position: 'bottom-end',
-      icon: 'success',
+      icon: 'error',
       title: 'Se ha eliminado el Administrador',
       showConfirmButton: false,
       timer: 1500,
@@ -387,15 +387,26 @@ export class ModalContentWithInterceptorComponent implements OnInit {
     };
     if (this.id >= 0) {
       // Editamos Usuario
-      this._usuarioService.editarUsuario(this.id, USUARIO).subscribe((data) => {
-        this.obtenerUsuarios();
-      });
-      Swal.fire({
-        position: 'bottom-end',
-        icon: 'success',
-        title: '!Has creado un nuevo usuario con éxito!',
-        showConfirmButton: false,
-        timer: 1500,
+      this._usuarioService.editarUsuario(this.id, USUARIO).subscribe({
+        next: (data) => {
+          Swal.fire({
+            position: 'bottom-end',
+            icon: 'success',
+            title: '¡Los cambios se guardaron con éxito!',
+            showConfirmButton: false,
+            timer: 1500,
+          });
+          this.obtenerUsuarios();
+        },
+        error: (err) => {
+          Swal.fire({
+            position: 'bottom-end',
+            icon: 'error',
+            title: 'Hubo un error, intentelo nuevamente',
+            showConfirmButton: false,
+            timer: 1500,
+          });
+        },
       });
     } else {
       // Creamos Usuario
@@ -405,7 +416,7 @@ export class ModalContentWithInterceptorComponent implements OnInit {
       Swal.fire({
         position: 'bottom-end',
         icon: 'success',
-        title: '¡Los cambios se guardaron con éxito!',
+        title: '¡Has creado un nuevo usuario con éxito!',
         showConfirmButton: false,
         timer: 1500,
       });
