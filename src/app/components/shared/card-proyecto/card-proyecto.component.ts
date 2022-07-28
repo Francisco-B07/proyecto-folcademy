@@ -14,7 +14,8 @@ export class CardProyectoComponent implements OnInit {
   @Input() recaudado: number = 0;
   @Input() objetivo: number = 1;
   @Input() opcion: string = '';
-
+  recaudadoString: string = '';
+  objetivoString: string = '';
   constructor() {}
   tipoProyecto() {
     if (this.opcion == 'DONAR') {
@@ -30,5 +31,9 @@ export class CardProyectoComponent implements OnInit {
   ngOnInit(): void {
     this.porc = `${this.porcentaje()}%`;
     console.log(this.porc);
+    this.recaudadoString = new Intl.NumberFormat('de-DE').format(
+      this.recaudado
+    );
+    this.objetivoString = new Intl.NumberFormat('de-DE').format(this.objetivo);
   }
 }

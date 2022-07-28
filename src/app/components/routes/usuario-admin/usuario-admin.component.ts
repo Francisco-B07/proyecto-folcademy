@@ -12,6 +12,7 @@ import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { Usuario } from 'src/app/interfaces/usuario';
 import { RecuperarIdService } from 'src/app/services/recuperar-id.service';
 import { UsuarioService } from 'src/app/services/usuario.service';
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-usuario-admin',
   templateUrl: './usuario-admin.component.html',
@@ -66,6 +67,13 @@ export class UsuarioAdminComponent implements OnInit {
   eliminarUsuario(id: number) {
     this._usuarioService.eliminarUsuario(id).subscribe((data) => {
       this.obtenerUsuarios();
+    });
+    Swal.fire({
+      position: 'bottom-end',
+      icon: 'success',
+      title: 'Se ha eliminado el Administrador',
+      showConfirmButton: false,
+      timer: 1500,
     });
   }
 
@@ -382,10 +390,24 @@ export class ModalContentWithInterceptorComponent implements OnInit {
       this._usuarioService.editarUsuario(this.id, USUARIO).subscribe((data) => {
         this.obtenerUsuarios();
       });
+      Swal.fire({
+        position: 'bottom-end',
+        icon: 'success',
+        title: '!Has creado un nuevo usuario con éxito!',
+        showConfirmButton: false,
+        timer: 1500,
+      });
     } else {
       // Creamos Usuario
       this._usuarioService.crearUsuario(USUARIO).subscribe((data) => {
         this.obtenerUsuarios();
+      });
+      Swal.fire({
+        position: 'bottom-end',
+        icon: 'success',
+        title: '¡Los cambios se guardaron con éxito!',
+        showConfirmButton: false,
+        timer: 1500,
       });
     }
     this.modalService._hideModal();

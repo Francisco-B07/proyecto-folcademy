@@ -9,7 +9,6 @@ import { Proyecto } from 'src/app/interfaces/proyecto';
 export class LandingComponent implements OnInit {
   pageActual: number = 1;
   cards: number = 0;
-
   constructor() {}
 
   ngOnInit(): void {}
