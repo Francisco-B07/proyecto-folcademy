@@ -1,12 +1,11 @@
-<!-- FALTA IMPLEMENTACIÓN -->
-<!-- <div>
+<div>
   <h4 class="miga-de-pan p-1 m-1">Inicio de sesión</h4>
 </div>
 <div class="container seccion">
   <div class="text-center mb-3">
     <img src="assets/bb.png" alt="Logo de Bisblick.">
   </div>
-  <form [formGroup]="loginForm" (ngSubmit)="onLogin()" class="d-flex justify-content-center flex-column align-items-center">
+  <form  class="d-flex justify-content-center flex-column align-items-center">
     <div class="div-1">
       <input type="email" class="form-control input" placeholder="Usuario o Email" formControlName="email">
     </div>
@@ -16,13 +15,13 @@
     </div>
 
     <div class="div-3">
-      <button type="button" class="btn boton" routerLink="/usuario-admin" [disabled]="loginForm.invalid">
+      <button type="button" class="btn boton" routerLink="/usuario-admin" >
         <p class="letra-boton">Iniciar Sesion</p>
       </button>
     </div>
   </form>
 
-  <ng-template let-error let-text="text" #passwordError>
+  <!-- <ng-template let-error let-text="text" #passwordError>
     <b>Error:</b>
     <div *ngIf="error?.minlegth">
       <i>No cumples con los caracteres minimos que son({{error?.minlenght.requiredLength}}), ingresaste solo:
@@ -30,7 +29,7 @@
     </div>
   </ng-template>
 
-  <ng-template let-error let-text="text" #mensajeError> {{error | json}} {{ text }} </ng-template>
+  <ng-template let-error let-text="text" #mensajeError> {{error | json}} {{ text }} </ng-template> -->
 
 
 
@@ -45,4 +44,4 @@
 
   </div>
 
-</div> -->
+</div>

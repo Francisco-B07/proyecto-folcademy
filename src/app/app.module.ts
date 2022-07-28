@@ -12,6 +12,8 @@ import { SharedModule } from './components/shared/shared.module';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { RoutesModule } from './components/routes/routes.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { environment } from 'src/environments/environment';
+
 
 @NgModule({
   declarations: [AppComponent],

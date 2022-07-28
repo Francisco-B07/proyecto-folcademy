@@ -13,6 +13,7 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { LandingComponent } from './landing/landing.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LogInComponent } from './log-in/log-in.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     UsuarioAdminComponent,
     ProyectosAdminComponent,
     RecuperarContraseniaComponent,
+    LogInComponent,
   ],
   imports: [
     CommonModule,
