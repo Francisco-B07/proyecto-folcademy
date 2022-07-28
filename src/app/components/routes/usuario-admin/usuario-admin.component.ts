@@ -70,7 +70,7 @@ export class UsuarioAdminComponent implements OnInit {
     });
     Swal.fire({
       position: 'bottom-end',
-      icon: 'error',
+      icon: 'success',
       title: 'Se ha eliminado el Administrador',
       showConfirmButton: false,
       timer: 1500,
