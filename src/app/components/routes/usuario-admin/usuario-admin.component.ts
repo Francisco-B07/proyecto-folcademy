@@ -410,15 +410,26 @@ export class ModalContentWithInterceptorComponent implements OnInit {
       });
     } else {
       // Creamos Usuario
-      this._usuarioService.crearUsuario(USUARIO).subscribe((data) => {
-        this.obtenerUsuarios();
-      });
-      Swal.fire({
-        position: 'bottom-end',
-        icon: 'success',
-        title: '¡Has creado un nuevo usuario con éxito!',
-        showConfirmButton: false,
-        timer: 1500,
+      this._usuarioService.crearUsuario(USUARIO).subscribe({
+        next: (data) => {
+          Swal.fire({
+            position: 'bottom-end',
+            icon: 'success',
+            title: '¡Has creado un nuevo usuario con éxito!',
+            showConfirmButton: false,
+            timer: 1500,
+          });
+          this.obtenerUsuarios();
+        },
+        error: (err) => {
+          Swal.fire({
+            position: 'bottom-end',
+            icon: 'error',
+            title: 'Hubo un error, intentelo nuevamente',
+            showConfirmButton: false,
+            timer: 1500,
+          });
+        },
       });
     }
     this.modalService._hideModal();
