@@ -1,6 +1,20 @@
-<div>
-  <h4 class="miga-de-pan p-1 m-1">Inicio de sesión</h4>
-</div>
+<div class="contenedor-login">
+  <div class="migas-de-pan">
+    <ul class="breadcrumb">
+      <li class="breadcrumb-item d-flex">
+        <a class="nav-link" routerLink="/login">
+          <img
+            class="flecha-atras"
+            href="https://www.bisblick.org/quienes-somos/"
+            src="assets/Arrow 76.svg"
+            alt=""
+          />
+        </a>
+        <a class="nav-link">Inicio de Sesión</a>
+      </li>
+    </ul>
+  </div>
+
 <div class="container seccion">
   <div class="text-center mb-3">
     <img src="assets/bb.png" alt="Logo de Bisblick.">
@@ -15,7 +29,7 @@
     </div>
 
     <div class="div-3">
-      <button type="button" class="btn boton" routerLink="/usuario-admin" [disabled]="loginForm.invalid">
+      <button type="button" class="btn boton" [disabled]="loginForm.invalid" (click)="onLogin()">
         <p class="letra-boton">Iniciar Sesion</p>
       </button>
     </div>
@@ -44,4 +58,5 @@
 
   </div>
 
+</div>
 </div>

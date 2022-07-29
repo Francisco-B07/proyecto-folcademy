@@ -2,7 +2,12 @@
   margin-top: 40px;
 } */
 .seccion{
-  margin-top: 90px;
+  /* margin-top: 90px; */
+  zoom: 0.9;
+  position: relative;
+  z-index: 1;
+  top: 106px;
+  height: calc(100vh - 78px);
 }
 .titulo {
   margin-top: 42px;
@@ -30,7 +35,6 @@ margin-top: 30px;
   height: 474px;
   background: #FDF8F8;
   border: 1px solid #857B7B;
-  border-radius: 6px;
 }
 .texto {
   margin-top: 53px;
@@ -53,7 +57,6 @@ margin-top: 30px;
   box-sizing: border-box;
   width: 236px;
   height: 47px;
-  background: #EAEAEA;
   border: 1px solid #857B7B;
 }
 .input::placeholder {
@@ -90,14 +93,29 @@ margin-top: 30px;
   margin: 30px 22px;
   background: #fdf8f8;
   border: 2px solid #b97ebb;
-  border-radius: 10px;
 }
 .migas-de-pan {
-  font-family: "Dosis";
+  margin-top: 15px;
+}
+.breadcrumb-item {
+  margin-left: 26px;
+  margin-top: 12px;
+}
+.flecha-atras {
+  margin-top: -5px;
+}
+.nav-link {
+  padding: 8px 4px;
+
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
-  color: #555555;
-  margin-top: 36px;
-  margin-left: 13px;
+  font-size: 16px;
+  line-height: 20px;
+  color: #857b7b !important;
+}
+.link-usuarios {
+  text-decoration: underline;
+  color: #857b7b !important;
+  padding-left: 0;
 }

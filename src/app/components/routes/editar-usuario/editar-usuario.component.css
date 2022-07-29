@@ -4,6 +4,11 @@
   }
   .contenedor{
     margin-top: 150px;
+    zoom: 0.9;
+    position: relative;
+    z-index: 1;
+    top: 106px;
+    height: calc(100vh - 78px);
   }
   .cambio{  
     box-sizing: border-box;

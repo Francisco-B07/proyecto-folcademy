@@ -2,8 +2,43 @@
     color: #555555;
     font-size: 15px;
   }
+  .migas-de-pan {
+    margin-top: 15px;
+  }
+  .breadcrumb-item {
+    margin-left: 26px;
+    margin-top: 12px;
+  }
+  .flecha-atras {
+    margin-top: -5px;
+  }
+  .nav-link {
+    padding: 8px 4px;
+  
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #857b7b !important;
+  }
+  .link-usuarios {
+    
+    color: #857b7b !important;
+    padding-left: 0;
+  }
+  .link-usuarios1 {
+    text-decoration: underline;
+    color: #857b7b !important;
+    padding-left: 0;
+  }
   .contenedor{
-    margin-top: 110px;
+  
+    zoom: 0.9;
+    position: relative;
+    z-index: 1;
+    top: 120px;
+    height: calc(100vh - 78px);
   }
   .cambio{  
     height: 425px;

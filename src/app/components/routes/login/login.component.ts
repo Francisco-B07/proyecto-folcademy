@@ -11,7 +11,8 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
 
   loginForm: FormGroup
-  constructor(private authSvc: AuthService, private fb: FormBuilder) { 
+  token: string = ''
+  constructor(private authSvc: AuthService, private fb: FormBuilder, private route: Router) { 
     this.loginForm = this.fb.group ({
             email: new FormControl('', Validators.required),
             password: new FormControl('', Validators.required)
@@ -26,7 +27,18 @@ export class LoginComponent implements OnInit {
       email: this.loginForm.get('email')?.value,
       password: this.loginForm.get('password')?.value
     }
-    this.authSvc.loginByEmail(USUARIO).subscribe(data => {console.log(data)})
+    this.authSvc.loginByEmail(USUARIO).subscribe(data => {
+      console.log('esta es la data', data.token)
+      console.log('esta es la data', data.bearer)
+
+      this.token = data.bearer + ' ' + data.token
+      console.log('este es el token', this.token)
+      
+      if(this.token != ''){
+        this.route.navigate(['/usuario-admin'])
+        
+      }
+    })
   }
 
 }
