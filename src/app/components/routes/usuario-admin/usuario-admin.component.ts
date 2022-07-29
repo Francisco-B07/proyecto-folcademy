@@ -147,11 +147,11 @@ export class UsuarioAdminComponent implements OnInit {
           .toLocaleLowerCase()
           .match(this.toSearch.toLocaleLowerCase());
       }
-      if (res.nombre) {
-        return res.nombre
-          .toLocaleLowerCase()
-          .match(this.toSearch.toLocaleLowerCase());
-      }
+      // if (res.nombre) {
+      //   return res.nombre
+      //     .toLocaleLowerCase()
+      //     .match(this.toSearch.toLocaleLowerCase());
+      // }
     });
   }
 }

@@ -17,65 +17,34 @@ export class ProyectosAdminComponent implements OnInit {
     {
       nombre: 'Crowfunding',
       tipoDeProyecto: 'Suscripcion',
-      fechaDeInicio: '24/5/2022',
-      fechaDeFin: '24/5/2023',
+      estado: 'Activo ',
     },
     {
-      nombre: 'Proyecto donar',
+      nombre: 'Proyecto',
       tipoDeProyecto: 'Donar',
-      fechaDeInicio: '24/5/2022',
-      fechaDeFin: '24/5/2023',
+      estado: 'Desactivo',
     },
     {
-      nombre: 'Proyecto Participar',
-      tipoDeProyecto: 'Participar',
-      fechaDeInicio: '24/5/2022',
-      fechaDeFin: '24/5/2023',
-    },
-    {
-      nombre: 'Proyecto Participar',
-      tipoDeProyecto: 'Participar',
-      fechaDeInicio: '24/5/2022',
-      fechaDeFin: '24/5/2023',
-    },
-    {
-      nombre: 'Proyecto Participar',
-      tipoDeProyecto: 'Participar',
-      fechaDeInicio: '24/5/2022',
-      fechaDeFin: '24/5/2023',
-    },
-    {
-      nombre: 'Proyecto Participar',
-      tipoDeProyecto: 'Participar',
-      fechaDeInicio: '24/5/2022',
-      fechaDeFin: '24/5/2023',
-    },
-    {
-      nombre: 'Proyecto Participar',
-      tipoDeProyecto: 'Participar',
-      fechaDeInicio: '24/5/2022',
-      fechaDeFin: '24/5/2023',
-    },
-    {
-      nombre: 'Proyecto Participar',
-      tipoDeProyecto: 'Participar',
-      fechaDeInicio: '24/5/2022',
-      fechaDeFin: '24/5/2023',
+      nombre: 'Proyecto Juan',
+      tipoDeProyecto: 'Voluntariado',
+      estado: 'Cerrado',
     },
   ];
-  encountered: any[] = [];
+  encountered: any[] = this.proyectos;
   constructor() {}
 
   ngOnInit(): void {}
   search() {
+    this.encountered = this.proyectos;
+
     this.encountered = this.proyectos.filter((res) => {
-      if (res.title) {
-        return res.title
+      if (res.nombre) {
+        return res.nombre
           .toLocaleLowerCase()
           .match(this.toSearch.toLocaleLowerCase());
       }
-      if (res.name) {
-        return res.name
+      if (res.tipoDeProyecto) {
+        return res.tipoDeProyecto
           .toLocaleLowerCase()
           .match(this.toSearch.toLocaleLowerCase());
       }
