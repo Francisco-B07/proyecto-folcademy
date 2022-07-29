@@ -73,6 +73,8 @@
 }
 .cerrar-sesion__opcion:hover {
   color: #ea138c;
+  font-size: 23px;
+  margin-left: 9px;
 }
 
 .usuarios-admin {
@@ -289,6 +291,7 @@ td {
 }
 
 /* MODAL ELIMINAR */
+
 .modal-body {
   width: 425px;
   height: 175px;

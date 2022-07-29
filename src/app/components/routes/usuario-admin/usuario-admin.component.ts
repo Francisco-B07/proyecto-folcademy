@@ -165,9 +165,7 @@ export class UsuarioAdminComponent implements OnInit {
         class="close btn-close pull-right"
         aria-label="Close"
         (click)="bsModalRef?.hide()"
-      >
-        <span aria-hidden="true">&times;</span>
-      </button>
+      ></button>
 
       <div class="d-flex justify-content-center">
         <img
