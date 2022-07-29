@@ -65,15 +65,26 @@ export class UsuarioAdminComponent implements OnInit {
     this.cd.detectChanges();
   }
   eliminarUsuario(id: number) {
-    this._usuarioService.eliminarUsuario(id).subscribe((data) => {
-      this.obtenerUsuarios();
-    });
-    Swal.fire({
-      position: 'bottom-end',
-      icon: 'success',
-      title: 'Se ha eliminado el Administrador',
-      showConfirmButton: false,
-      timer: 1500,
+    this._usuarioService.eliminarUsuario(id).subscribe({
+      next: (data) => {
+        Swal.fire({
+          position: 'bottom-end',
+          icon: 'success',
+          title: 'Se ha eliminado el Administrador',
+          showConfirmButton: false,
+          timer: 1500,
+        });
+        this.obtenerUsuarios();
+      },
+      error: (err) => {
+        Swal.fire({
+          position: 'bottom-end',
+          icon: 'error',
+          title: 'Hubo un error, intentelo nuevamente',
+          showConfirmButton: false,
+          timer: 1500,
+        });
+      },
     });
   }
 
@@ -355,6 +366,7 @@ export class ModalContentWithInterceptorComponent implements OnInit {
       this.textoBoton = 'Guardar';
       this.editarUsuario(this.id);
     }
+    this.obtenerUsuarios();
   }
   obtenerUsuarios() {
     this._usuarioService.getUsuarios().subscribe((data) => {
