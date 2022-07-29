@@ -187,7 +187,9 @@
 tbody {
   color: transparent;
 }
-
+td {
+  border: transparent;
+}
 .grupo-de-iconos {
   margin-right: 26px;
 }
