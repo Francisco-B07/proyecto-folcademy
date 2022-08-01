@@ -396,7 +396,7 @@ export class ModalContentWithInterceptorComponent implements OnInit, OnDestroy {
       nombre: this.usuarioForm.get('nombre')?.value,
       apellido: this.usuarioForm.get('apellido')?.value,
       email: this.usuarioForm.get('email')?.value,
-      password: 'Bb123456',
+      password: '1234',
       roles: [],
     };
     if (this.id >= 0) {
