@@ -2,6 +2,7 @@ import {
   ChangeDetectorRef,
   Component,
   Input,
+  OnDestroy,
   OnInit,
   TemplateRef,
 } from '@angular/core';
@@ -48,7 +49,9 @@ export class UsuarioAdminComponent implements OnInit {
     });
     this.cd.detectChanges();
   }
-
+  ngDoCheck() {
+    this.obtenerUsuarios();
+  }
   enviarId(id: number) {
     this._idService.recuperarId(id);
   }
@@ -58,7 +61,6 @@ export class UsuarioAdminComponent implements OnInit {
 
   obtenerUsuarios() {
     this._usuarioService.getUsuarios().subscribe((data) => {
-      console.log(data);
       this.usuarios = data.content;
       this.encountered = data.content;
     });
@@ -122,6 +124,7 @@ export class UsuarioAdminComponent implements OnInit {
     );
 
     this.bsModalRef.content.closeBtnName = 'Close';
+    this.obtenerUsuarios();
   }
 
   confirmClose(): void {
@@ -335,7 +338,7 @@ export class UsuarioAdminComponent implements OnInit {
     `,
   ],
 })
-export class ModalContentWithInterceptorComponent implements OnInit {
+export class ModalContentWithInterceptorComponent implements OnInit, OnDestroy {
   usuarioForm: FormGroup;
   usuarios: Usuario[] = [];
   id: number = this._idService.id;
@@ -364,6 +367,9 @@ export class ModalContentWithInterceptorComponent implements OnInit {
       this.textoBoton = 'Guardar';
       this.editarUsuario(this.id);
     }
+    this.obtenerUsuarios();
+  }
+  ngOnDestroy(): void {
     this.obtenerUsuarios();
   }
   obtenerUsuarios() {
