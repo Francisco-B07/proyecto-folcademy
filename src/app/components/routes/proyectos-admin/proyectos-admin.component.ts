@@ -39,14 +39,14 @@ export class ProyectosAdminComponent implements OnInit {
 
     this.encountered = this.proyectos.filter((res) => {
       if (res.nombre) {
-        return res.nombre
-          .toLocaleLowerCase()
-          .match(this.toSearch.toLocaleLowerCase());
-      }
-      if (res.tipoDeProyecto) {
-        return res.tipoDeProyecto
-          .toLocaleLowerCase()
-          .match(this.toSearch.toLocaleLowerCase());
+        return (
+          res.nombre
+            .toLocaleLowerCase()
+            .match(this.toSearch.toLocaleLowerCase()) ||
+          res.tipoDeProyecto
+            .toLocaleLowerCase()
+            .match(this.toSearch.toLocaleLowerCase())
+        );
       }
     });
   }

@@ -146,15 +146,13 @@ export class UsuarioAdminComponent implements OnInit {
 
     this.encountered = this.usuarios.filter((res) => {
       if (res.nombre) {
-        return res.nombre
+        res.nombre
           .toLocaleLowerCase()
-          .match(this.toSearch.toLocaleLowerCase());
+          .match(this.toSearch.toLocaleLowerCase()) ||
+          res.apellido
+            .toLocaleLowerCase()
+            .match(this.toSearch.toLocaleLowerCase());
       }
-      // if (res.nombre) {
-      //   return res.nombre
-      //     .toLocaleLowerCase()
-      //     .match(this.toSearch.toLocaleLowerCase());
-      // }
     });
   }
 }
