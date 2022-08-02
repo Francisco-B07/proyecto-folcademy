@@ -1,5 +1,8 @@
 <div class="d-flex pantalla-listado-proyectos">
-  <div class="d-flex flex-column sidenav justify-content-between">
+  <div
+    class="d-flex flex-column sidenav justify-content-between"
+    [ngClass]="proyectos.length <= 6 ? 'paginacion-cero' : ''"
+  >
     <div class="contenido">
       <button
         class="opcion"
@@ -26,14 +29,16 @@
         src="../../../../assets/Power.svg"
         alt=""
       />
-      <button class="cerrar-sesion__opcion">Cerrar Sesión</button>
+      <button class="cerrar-sesion__opcion" routerLink="/">
+        Cerrar Sesión
+      </button>
     </div>
   </div>
   <div class="proyectos-admin">
     <div class="migas-de-pan">
       <ul class="breadcrumb">
         <li class="breadcrumb-item d-flex">
-          <a class="nav-link" routerLink="/admin">
+          <a class="nav-link" routerLink="/login">
             <img
               class="flecha-atras"
               href="https://www.bisblick.org/quienes-somos/"
@@ -41,7 +46,7 @@
               alt=""
             />
           </a>
-          <a class="nav-link" routerLink="/admin">Inicio de Sesión/</a>
+          <a class="nav-link" routerLink="/login">Inicio de Sesión/</a>
           <span class="nav-link link-proyectos">Proyectos</span>
         </li>
       </ul>
@@ -77,8 +82,8 @@
             <tr>
               <th class="separar">NOMBRE</th>
               <th>TIPO DE PROYECTO</th>
-              <th>FECHA DE INICIO</th>
-              <th>FECHA DE FIN</th>
+              <th>ESTADO DEL PROYECTO</th>
+
               <th></th>
             </tr>
           </thead>
@@ -86,14 +91,15 @@
           <tbody class="informacion-tabla">
             <tr
               *ngFor="
-                let proyecto of proyectos
+                let proyecto of encountered
                   | paginate: { itemsPerPage: 6, currentPage: pageActual }
               "
             >
               <td class="contenido-tabla separar">{{ proyecto.nombre }}</td>
               <td class="contenido-tabla">{{ proyecto.tipoDeProyecto }}</td>
-              <td class="contenido-tabla">{{ proyecto.fechaDeInicio }}</td>
-              <td class="contenido-tabla">{{ proyecto.fechaDeFin }}</td>
+              <td class="contenido-tabla contenido-tabla-centrado">
+                {{ proyecto.estado }}
+              </td>
               <td class="d-flex justify-content-around grupo-de-iconos">
                 <div class="iconos icono-separacion">
                   <img
