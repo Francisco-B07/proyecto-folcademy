@@ -8,7 +8,7 @@ import { Usuario } from '../interfaces/usuario';
 })
 export class UsuarioService {
   auth =
-    'Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYXNhQGdtYWlsLmNvbSIsImlhdCI6MTY1OTM2NDQwMCwiZXhwIjoxNjU5NDAwNDAwfQ.C_MFOOegUVcNT10dGVH4bIqZPeZxKCeEOjeoD3v9SBZ5D3R09EfrGDDeciUx5wQS-MvN2jNzpq5rV5Z6kPddjw';
+    'Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJvbG1vc0BnbWFpbC5jb20iLCJpYXQiOjE2NTk0NTg4NzgsImV4cCI6MTY1OTQ5NDg3OH0.sVBC1TSW8Ji0a4p8Sjoy1PJ0a57wulpo6b6jXpcwZxTE3xing9tbwu5cPhlP56H81EEkOyNsZEwKSXx0QhMebA';
   baseURL = 'https://bisblick-back-muni.herokuapp.com/';
   constructor(private http: HttpClient) {}
   getUsuarios(): Observable<any> {
