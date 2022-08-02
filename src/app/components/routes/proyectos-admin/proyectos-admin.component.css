@@ -226,6 +226,10 @@ td {
 
   color: #383838;
 }
+.contenido-tabla-centrado {
+  width: 240px;
+  text-align: center;
+}
 .filas-impares tbody tr:nth-of-type(odd) {
   background-color: #f8f0f5;
 }
