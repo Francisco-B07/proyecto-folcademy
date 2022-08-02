@@ -14,7 +14,8 @@
     box-sizing: border-box;
     width: 482px;
     height: 578px;
-    background: #FFFFFF;
+    background: #FDF8F8;
+    background-color: #FDF8F8;
     border: 1px solid #857B7B;
     box-shadow: 0px 2px 7px rgb(0 0 0 / 20%);
   }

@@ -28,10 +28,10 @@
       <h3 class="texto">Ingresa tu correo electrónico</h3>
       <div class="d-grid justify-content-center contenedor-input">
         <div class="d-flex justify-content-center">
-          <input class="input" type="email" placeholder="Correo electrónico " />
+          <input class="input" type="email" placeholder="Correo electrónico " [formControl]="userEmail" required />
         </div>
 
-        <button type="button" class="btn boton" (click)="openModal(template)">
+        <button type="button" class="btn boton" (click)="openModal(template)" (click)="onReset()">
           Recuperar Contraseña
         </button>
 
