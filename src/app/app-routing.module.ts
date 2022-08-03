@@ -21,7 +21,7 @@ const routes: Routes = [
 },
 
 {
-  path: 'contraseña',
+  path: 'modificar-clave',
   component: ContrasenaComponent
 },
 {
