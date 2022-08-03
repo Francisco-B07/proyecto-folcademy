@@ -10,6 +10,7 @@
     <span class="nav-link link-proyectos"> Proyectos </span>
   </li>
 </ul> -->
+
 <img
   src="../../../../assets/Vector 720.svg"
   alt=""
@@ -20,11 +21,7 @@
   alt=""
   class="miscelanea-derecha cruz-derecha"
 />
-<img
-  src="../../../../assets/Group 7656.svg"
-  alt=""
-  class="miscelanea-derecha cruz-derecha-dos"
-/>
+
 <img
   src="../../../../assets/Group 7656.svg"
   alt=""
@@ -56,6 +53,12 @@
     </p>
   </div>
   <div class="cards row row-cols-2 landing__contenedor">
+    <img
+      class="imagen-sin-proyectos"
+      *ngIf="proyectos.length == 0"
+      src="../../../../assets/Component 78.png"
+      alt=""
+    />
     <div
       *ngFor="
         let proyecto of proyectos
@@ -110,7 +113,7 @@
     </div>
     <div class="impacto__numeros">
       <p class="numero">49</p>
-      <p class="texto">JÓVENES INSERTADOS</p>
+      <p class="texto">JÓVENES INSERTADOS LABORALMENTE</p>
     </div>
   </div>
 </div>

@@ -6,7 +6,10 @@ import { RecuperarContraseniaComponent } from './recuperar-contrasenia/recuperar
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { ContrasenaComponent } from './contrasena/contrasena.component';
 import { CambiarContrasenaComponent } from './cambiar-contrasena/cambiar-contrasena.component';
-import { UsuarioAdminComponent } from './usuario-admin/usuario-admin.component';
+import {
+  ModalContentWithInterceptorComponent,
+  UsuarioAdminComponent,
+} from './usuario-admin/usuario-admin.component';
 import { ProyectosAdminComponent } from './proyectos-admin/proyectos-admin.component';
 import { SharedModule } from '../shared/shared.module';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
@@ -25,6 +28,7 @@ import { LogInComponent } from './log-in/log-in.component';
     ProyectosAdminComponent,
     RecuperarContraseniaComponent,
     LogInComponent,
+    ModalContentWithInterceptorComponent,
   ],
   imports: [
     CommonModule,
@@ -34,7 +38,7 @@ import { LogInComponent } from './log-in/log-in.component';
     NgxPaginationModule,
     RouterModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   exports: [
     LandingComponent,

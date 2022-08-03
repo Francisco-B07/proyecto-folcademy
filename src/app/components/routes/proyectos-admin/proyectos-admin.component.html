@@ -1,175 +1,130 @@
-<!-- FALTA IMPLEMENTACIÓN
-<section class="container">
-    <p class="letrero">Inicio de sesión/Usuarios/Proyectos</p>
-    <h2>Proyectos</h2>
-    <div class="row">
-
-        <div class="col-3 contenedor-2 cont">
-            <button class="btn" type="submit">Usuario</button>
-            <button class="btn" type="submit">Proyectos</button>
-            <a class="d-flex" href="">Cerrar Seción</a>
-        </div>
-    
-        <div class="col-8 contenedor ms-5">
-    
-    
-    
-            <div>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2 buscador" type="search" placeholder="Buscar por nombre, email" aria-label="Search">
-                    <button class="btn btn-outline-dark boton-buscar" type="submit">Crear Proyecto</button>
-                </form>
-            </div>
-            
-        
-            <div class="contenedor-3 d-flex mat-elevation-z4 mt-sm-5 my-3">
-                <p class="col-3 form-letra  p-md-3">NOMBRE DEL PROYECTO</p>
-                <p class="col-3 form-letra tipo  p-md-3">TIPO DE PROYECTO</p>
-                <p class="col-3 form-letra fecha p-md-3">INICIO DEL PROYECTO</p>
-                <p class="col-3 form-letra fecha p-md-3">FIN DEL PROYECTO</p>
-                </div>
-                <div class="row">
-                <div class="container">
-                <div class="texto d-flex col-12 my-md-3">
-                    <p class="m-auto col-3 ps-lg-2 ">Ayudemos a Juan </p>
-                    <p class="m-auto col-2">Donar</p>
-                    <p class="m-auto col-2" >27/07/2022</p>
-                    <p class="m-auto col-2" >27/07/2022</p>
-                    <img  class="m-auto " src="assets/pencil.svg" alt="">
-                    <img  class="m-auto " src="assets/tong.svg" alt="">
-                </div>
-
-                <div class="texto d-flex col-12 my-md-3">
-                    <p class="m-auto col-3 ps-lg-2 ">Ayudemos a Pedro</p>
-                    <p class="m-auto col-2">Voluntarios</p>
-                    <p class="m-auto col-2" >12/08/2022</p>
-                    <p class="m-auto col-2" >12/08/2022</p>
-                    <img  class="m-auto " src="assets/pencil.svg" alt="">
-                    <img  class="m-auto " src="assets/tong.svg" alt="">
-                </div>
-
-                </div>
-            </div>
-            
-
-        </div>
-
+<div class="d-flex pantalla-listado-proyectos">
+  <div
+    class="d-flex flex-column sidenav justify-content-between"
+    [ngClass]="proyectos.length <= 6 ? 'paginacion-cero' : ''"
+  >
+    <div class="contenido">
+      <button
+        class="opcion"
+        (click)="seleccionoOpcion('usuarios')"
+        [ngClass]="opcion == 'usuarios' ? 'opcion-seleccionada' : ''"
+        routerLink="/usuario-admin"
+      >
+        Usuarios
+      </button>
+      <div class="linea"></div>
+      <button
+        class="opcion"
+        (click)="seleccionoOpcion('proyectos')"
+        [ngClass]="opcion == 'proyectos' ? 'opcion-seleccionada' : ''"
+        routerLink="/proyectos-admin"
+      >
+        Proyectos
+      </button>
+      <div class="linea"></div>
     </div>
-    
-
-</section> -->
-
-<div class="d-flex">
-    <div class="d-flex flex-column sidenav justify-content-between">
-      <div class="contenido">
-        <button
-          class="opcion"
-          (click)="seleccionoOpcion('usuarios')"
-          [ngClass]="opcion == 'usuarios' ? 'opcion-seleccionada' : ''"
-          routerLink="/usuario-admin"
-        >
-          Usuarios
-        </button>
-        <div class="linea"></div>
-        <button
-          class="opcion"
-          (click)="seleccionoOpcion('proyectos')"
-          [ngClass]="opcion == 'proyectos' ? 'opcion-seleccionada' : ''"
-          routerLink="/proyectos-admin"
-        >
-          Proyectos
-        </button>
-        <div class="linea"></div>
-      </div>
-      <div class="cerrar-sesion">
-        <img
-          class="cerrar-sesion__imagen"
-          src="../../../../assets/Power.svg"
-          alt=""
-        />
-        <button class="cerrar-sesion__opcion">Cerrar Sesión</button>
-      </div>
-    </div>
-    <div class="proyectos-admin">
-      <div class="migas-de-pan">
-        <ul class="breadcrumb">
-          <li class="breadcrumb-item d-flex">
-            <a class="nav-link" routerLink="/admin">
-              <img
-                class="flecha-atras"
-                href="https://www.bisblick.org/quienes-somos/"
-                src="../../../../assets/Arrow left short.svg"
-                alt=""
-              />
-            </a>
-            <a class="nav-link" routerLink="/admin">Inicio de Sesión/</a>
-            <span class="nav-link link-proyectos">Proyectos</span>
-          </li>
-        </ul>
-      </div>
-      <h2 class="titulo">PROYECTOS</h2>
-      <div class="contenedor-listado-proyectos d-flex justify-content-center">
-        <div class="proyectos-admin__listado">
-          <div
-            class="d-flex justify-content-between align-items-center proyectos-admin__cabecera"
-          >
-            <input
-              class="buscador__input"
-              type="text"
-              [(ngModel)]="toSearch"
-              (ngModelChange)="search()"
-              placeholder="Buscar por nombre"
-            />
-            <button class="boton-crear">+ Crear Proyecto</button>
-          </div>
-          <table class="table filas-impares">
-            <thead class="cabecera-tabla">
-              <tr>
-                <th class="separar">NOMBRE</th>
-                <th>TIPO DE PROYECTO</th>
-                <th>FECHA DE INICIO</th>
-                <th>FECHA DE FIN</th>
-                <th></th>
-              </tr>
-            </thead>
-            <div class="separacion-datos"></div>
-            <tbody class="contenido-tabla">
-              <tr
-                *ngFor="
-                  let proyecto of proyectos
-                    | paginate: { itemsPerPage: 6, currentPage: pageActual }
-                "
-              >
-                <td class="contenido separar">{{ proyecto.nombre }}</td>
-                <td class="contenido">{{ proyecto.tipoDeProyecto }}</td>
-                <td class="contenido">{{ proyecto.fechaDeInicio }}</td>
-                <td class="contenido">{{ proyecto.fechaDeFin }}</td>
-                <td class="d-flex justify-content-around grupo-de-iconos">
-                  <div class="iconos icono-separacion">
-                    <img
-                      class="icono"
-                      src="../../../../assets/pencil.svg"
-                      alt=""
-                    />
-                  </div>
-                  <div class="iconos">
-                    <img class="icono" src="../../../../assets/tong.svg" alt="" />
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-      <div class="navegador d-flex justify-content-center">
-        <pagination-controls
-          class="pagination"
-          (pageChange)="pageActual = $event"
-          [autoHide]="true"
-          previousLabel=""
-          nextLabel=""
-        ></pagination-controls>
-      </div>
+    <div class="cerrar-sesion">
+      <img
+        class="cerrar-sesion__imagen"
+        src="../../../../assets/Power.svg"
+        alt=""
+      />
+      <button class="cerrar-sesion__opcion" routerLink="/">
+        Cerrar Sesión
+      </button>
     </div>
   </div>
-  
+  <div class="proyectos-admin">
+    <div class="migas-de-pan">
+      <ul class="breadcrumb">
+        <li class="breadcrumb-item d-flex">
+          <a class="nav-link" routerLink="/login">
+            <img
+              class="flecha-atras"
+              href="https://www.bisblick.org/quienes-somos/"
+              src="../../../../assets/Arrow left short.svg"
+              alt=""
+            />
+          </a>
+          <a class="nav-link" routerLink="/login">Inicio de Sesión/</a>
+          <span class="nav-link link-proyectos">Proyectos</span>
+        </li>
+      </ul>
+    </div>
+    <h2 class="titulo">PROYECTOS</h2>
+    <div class="contenedor-listado-proyectos d-flex justify-content-center">
+      <div class="proyectos-admin__listado">
+        <div
+          class="d-flex justify-content-between align-items-center proyectos-admin__cabecera"
+        >
+          <input
+            class="buscador__input"
+            type="text"
+            [(ngModel)]="toSearch"
+            (ngModelChange)="search()"
+            placeholder="Buscar por nombre"
+          />
+          <button class="boton-crear">+ Crear Proyecto</button>
+        </div>
+        <!-- <div class="d-flex justify-content-center align-items-center">
+          <img
+            class="imagen-sin-proyectos"
+            *ngIf="proyectos.length == 0"
+            src="../../../../assets/Component 78.png"
+            alt=""
+          />
+        </div> -->
+        <h5 *ngIf="proyectos.length == 0" class="mensaje-no-hay-proyectos">
+          NO HAY PROYECTOS CREADOS EN ESTE MOMENTO
+        </h5>
+        <table *ngIf="proyectos.length > 0" class="table filas-impares">
+          <thead class="cabecera-tabla">
+            <tr>
+              <th class="separar">NOMBRE</th>
+              <th>TIPO DE PROYECTO</th>
+              <th>ESTADO DEL PROYECTO</th>
+
+              <th></th>
+            </tr>
+          </thead>
+          <div class="separacion-datos"></div>
+          <tbody class="informacion-tabla">
+            <tr
+              *ngFor="
+                let proyecto of encountered
+                  | paginate: { itemsPerPage: 6, currentPage: pageActual }
+              "
+            >
+              <td class="contenido-tabla separar">{{ proyecto.nombre }}</td>
+              <td class="contenido-tabla">{{ proyecto.tipoDeProyecto }}</td>
+              <td class="contenido-tabla contenido-tabla-centrado">
+                {{ proyecto.estado }}
+              </td>
+              <td class="d-flex justify-content-around grupo-de-iconos">
+                <div class="iconos icono-separacion">
+                  <img
+                    class="icono"
+                    src="../../../../assets/pencil.svg"
+                    alt=""
+                  />
+                </div>
+                <div class="iconos">
+                  <img class="icono" src="../../../../assets/tong.svg" alt="" />
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="navegador d-flex justify-content-center">
+      <pagination-controls
+        class="pagination"
+        (pageChange)="pageActual = $event"
+        [autoHide]="true"
+        previousLabel=""
+        nextLabel=""
+      ></pagination-controls>
+    </div>
+  </div>
+</div>

@@ -11,7 +11,12 @@ export class CardSuscripcionComponent implements OnInit {
   @Input() descripcion: string =
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Imperdiet dis dui amet sem ut. In ultrices ....';
   @Input() recaudado: number = 0;
+  recaudadoString: string = '';
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.recaudadoString = new Intl.NumberFormat('de-DE').format(
+      this.recaudado
+    );
+  }
 }

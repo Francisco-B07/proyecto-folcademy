@@ -12,48 +12,45 @@ import { RecuperarContraseniaComponent } from './components/routes/recuperar-con
 import { LoginComponent } from './components/routes/login/login.component';
 import { AuthGuard } from './shared/guards/auth.guard';
 
-
-
 const routes: Routes = [
   {
-  path: 'login',
-  component: LoginComponent,
-},
+    path: 'login',
+    component: LoginComponent,
+  },
 
-{
-  path: 'contraseña',
-  component: ContrasenaComponent
-},
-{
-  path: 'cambio-contraseña',
-  component: CambiarContrasenaComponent
-},
-{
-  path: 'usuario-admin',
-  canActivate: [AuthGuard],
-  component: UsuarioAdminComponent
-},
-{
-  path: 'proyectos-admin',
-  component: ProyectosAdminComponent
-},
-{
-  path: 'recuperar-contraseña',
-  component: RecuperarContraseniaComponent
-},
-{
-  path: 'crear-usuario',
-  component: CrearUsuarioComponent
-},
-{
-  path: '',
-  component: LandingComponent
-},
-{
-  path: 'editar-usuario',
-  component: EditarUsuarioComponent
-}
-
+  {
+    path: 'contraseña',
+    component: ContrasenaComponent,
+  },
+  {
+    path: 'cambio-contraseña',
+    component: CambiarContrasenaComponent,
+  },
+  {
+    path: 'usuario-admin',
+    canActivate: [AuthGuard],
+    component: UsuarioAdminComponent,
+  },
+  {
+    path: 'proyectos-admin',
+    component: ProyectosAdminComponent,
+  },
+  {
+    path: 'recuperar-contraseña',
+    component: RecuperarContraseniaComponent,
+  },
+  {
+    path: 'crear-usuario',
+    component: CrearUsuarioComponent,
+  },
+  {
+    path: '',
+    component: LandingComponent,
+  },
+  {
+    path: 'editar-usuario',
+    component: EditarUsuarioComponent,
+  },
 ];
 
 @NgModule({

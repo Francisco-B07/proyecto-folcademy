@@ -22,19 +22,19 @@
         <p *ngIf="tipoProyecto()" class="progreso-titulo">RECAUDAD0</p>
         <p *ngIf="!tipoProyecto()" class="progreso-titulo">VOLUNTARIOS</p>
         <span *ngIf="tipoProyecto()" class="progreso-monto"
-          >${{ recaudado }}</span
+          >${{ recaudadoString }}</span
         >
         <span *ngIf="!tipoProyecto()" class="progreso-monto">{{
-          recaudado
+          recaudadoString
         }}</span>
       </div>
       <div class="d-flex">
         <p class="progreso-titulo">OBJETIVO</p>
         <span *ngIf="tipoProyecto()" class="progreso-monto"
-          >${{ objetivo }}</span
+          >${{ objetivoString }}</span
         >
         <span *ngIf="!tipoProyecto()" class="progreso-monto">{{
-          objetivo
+          objetivoString
         }}</span>
       </div>
     </div>

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HashLocationStrategy, LocationStrategy } from '@angular/common'
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -31,9 +31,13 @@ import { AuthService } from './service/auth.service';
     CarouselModule.forRoot(),
     ModalModule.forRoot(),
     NgxPaginationModule,
+<<<<<<< HEAD
     ReactiveFormsModule,
     FormsModule, 
     HttpClientModule
+=======
+    HttpClientModule,
+>>>>>>> implementar-crud-usuarios
   ],
   providers: [
     // { provide: HTTP_INTERCEPTORS,

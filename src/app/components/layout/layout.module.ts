@@ -3,19 +3,17 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
-
-
+import { SidenavComponent } from './sidenav/sidenav.component';
+import { AppRoutingModule } from 'src/app/app-routing.module';
 
 @NgModule({
   declarations: [
     HeaderComponent,
     FooterComponent,
-    NavbarComponent
+    NavbarComponent,
+    SidenavComponent,
   ],
-  imports: [
-    CommonModule
-  ],
-  exports: [HeaderComponent,
-  FooterComponent]
+  imports: [CommonModule, AppRoutingModule],
+  exports: [HeaderComponent, FooterComponent, SidenavComponent],
 })
 export class LayoutModule {}

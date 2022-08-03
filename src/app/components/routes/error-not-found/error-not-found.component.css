@@ -1,0 +1,38 @@
+.contenedor {
+  position: relative;
+  z-index: 1;
+  height: calc(100vh - 78px);
+  top: 106px;
+  margin-bottom: 106px;
+}
+.titulo {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 150px;
+  line-height: 183px;
+  /* identical to box height */
+
+  color: #000000;
+}
+.subtitulo {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 49px;
+  /* identical to box height */
+
+  color: #000000;
+}
+.mensaje {
+  width: 827px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 43px;
+  text-align: center;
+
+  color: #565454;
+}
