@@ -17,7 +17,6 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthService } from './service/auth.service';
 // import { HttpConfigInterceptor } from './interceptor/httpconfig.interceptor';
 
-
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -31,20 +30,17 @@ import { AuthService } from './service/auth.service';
     CarouselModule.forRoot(),
     ModalModule.forRoot(),
     NgxPaginationModule,
-<<<<<<< HEAD
     ReactiveFormsModule,
-    FormsModule, 
-    HttpClientModule
-=======
+    FormsModule,
     HttpClientModule,
->>>>>>> implementar-crud-usuarios
   ],
   providers: [
     // { provide: HTTP_INTERCEPTORS,
     //   useClass: HttpConfigInterceptor,
     //   multi: true},
-      AuthService,
-    { provide: LocationStrategy, useClass: HashLocationStrategy }],
+    AuthService,
+    { provide: LocationStrategy, useClass: HashLocationStrategy },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

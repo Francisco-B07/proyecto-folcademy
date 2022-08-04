@@ -49,9 +49,9 @@ export class UsuarioAdminComponent implements OnInit {
     });
     this.cd.detectChanges();
   }
-  ngDoCheck() {
-    this.obtenerUsuarios();
-  }
+  // ngDoCheck() {
+  //   this.obtenerUsuarios();
+  // }
   enviarId(id: number) {
     this._idService.recuperarId(id);
   }
@@ -77,6 +77,7 @@ export class UsuarioAdminComponent implements OnInit {
           timer: 1500,
         });
         this.obtenerUsuarios();
+        window.location.reload();
       },
       error: (err) => {
         Swal.fire({
@@ -411,6 +412,7 @@ export class ModalContentWithInterceptorComponent implements OnInit, OnDestroy {
             timer: 1500,
           });
           this.obtenerUsuarios();
+          window.location.reload();
         },
         error: (err) => {
           Swal.fire({
@@ -434,6 +436,7 @@ export class ModalContentWithInterceptorComponent implements OnInit, OnDestroy {
             timer: 1500,
           });
           this.obtenerUsuarios();
+          window.location.reload();
         },
         error: (err) => {
           Swal.fire({
@@ -443,6 +446,7 @@ export class ModalContentWithInterceptorComponent implements OnInit, OnDestroy {
             showConfirmButton: false,
             timer: 1500,
           });
+          window.location.reload();
         },
       });
     }
