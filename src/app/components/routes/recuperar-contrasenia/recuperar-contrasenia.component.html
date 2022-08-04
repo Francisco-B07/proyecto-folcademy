@@ -29,13 +29,17 @@
         class="imagen"
       />
       <h3 class="texto">Ingresa tu correo electrónico</h3>
-      <div class="d-grid justify-content-center contenedor-input">
+      <form
+        [formGroup]="usuarioForm"
+        (ngSubmit)="enviarEmail()"
+        class="d-grid justify-content-center contenedor-input"
+      >
         <div class="d-flex justify-content-center">
           <input
             class="input"
             type="email"
             placeholder="Correo electrónico "
-            [formControl]="userEmail"
+            formControlName="email"
             required
           />
         </div>
@@ -44,7 +48,7 @@
           type="button"
           class="btn boton"
           (click)="openModal(template)"
-          (click)="onReset()"
+          (click)="enviarEmail()"
         >
           Recuperar Contraseña
         </button>
@@ -65,7 +69,7 @@
             contraseña
           </div>
         </ng-template>
-      </div>
+      </form>
     </div>
   </div>
 </div>

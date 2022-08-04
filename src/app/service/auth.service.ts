@@ -57,4 +57,10 @@ export class AuthService {
 
     return this.http.post(this.baseURL + '/auth/change_password', usuario);
   }
+  enviarEmail(USUARIO: ModificarPassword): Observable<any> {
+    return this.http.post(this.baseURL + '/sendMailtemplate', USUARIO);
+  }
+  cambiarPassword(USUARIO: ModificarPassword): Observable<any> {
+    return this.http.post(this.baseURL + '/auth/recuperar', USUARIO);
+  }
 }

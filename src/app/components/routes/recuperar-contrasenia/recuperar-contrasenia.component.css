@@ -91,6 +91,9 @@
   width: 295px;
   height: 39.4px;
 }
+.boton:disabled {
+  background: #f077bb;
+}
 .texto-modal {
   height: 112px;
   font-family: "Dosis";
