@@ -1,5 +1,4 @@
-  <div class="d-flex  container seccion">
-  
+<div class="seccion">
   <div class="migas-de-pan">
     <ul class="breadcrumb">
       <li class="breadcrumb-item d-flex">
@@ -7,11 +6,11 @@
           <img
             class="flecha-atras"
             href="https://www.bisblick.org/quienes-somos/"
-            src="assets/Arrow 76.svg"
+            src="../../../../assets/Arrow left short.svg"
             alt=""
           />
         </a>
-        <a class="nav-link" routerLink="/login">Inicio de Sesión/</a>
+        <a class="nav-link" routerLink="/login">Inicio de sesión/</a>
         <span class="nav-link link-usuarios">Recuperar Contraseña</span>
       </li>
     </ul>
@@ -20,18 +19,33 @@
     <!-- <div class="d-flex justify-content-center contenedor-imagen">
       <img src="../../../../assets/logo_talentojovenc 2.png" alt="" />
     </div> -->
-    <h2 class="titulo">Recupera tu cuenta</h2>
+    <h2 class="titulo">Recupera tu contraseña</h2>
     <div
       class="d-flex flex-column align-items-center recuperar-contrasenia__input"
     >
-      <img src="../../../../assets/logo_talentojovenc 2.png" alt="" class="imagen" />
+      <img
+        src="../../../../assets/logo_talentojovenc 2.png"
+        alt=""
+        class="imagen"
+      />
       <h3 class="texto">Ingresa tu correo electrónico</h3>
       <div class="d-grid justify-content-center contenedor-input">
         <div class="d-flex justify-content-center">
-          <input class="input" type="email" placeholder="Correo electrónico " [formControl]="userEmail" required />
+          <input
+            class="input"
+            type="email"
+            placeholder="Correo electrónico "
+            [formControl]="userEmail"
+            required
+          />
         </div>
 
-        <button type="button" class="btn boton" (click)="openModal(template)" (click)="onReset()">
+        <button
+          type="button"
+          class="btn boton"
+          (click)="openModal(template)"
+          (click)="onReset()"
+        >
           Recuperar Contraseña
         </button>
 

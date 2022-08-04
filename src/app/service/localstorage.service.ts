@@ -1,13 +1,10 @@
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class LocalstorageService {
-
-  
-
-  constructor() { }
+  constructor() {}
 
   set(key: string, data: any) {
     try {
@@ -24,5 +21,4 @@ export class LocalstorageService {
       console.log(e);
     }
   }
-
 }

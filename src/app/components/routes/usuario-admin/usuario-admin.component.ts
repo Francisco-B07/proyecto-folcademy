@@ -1,14 +1,13 @@
 import {
   ChangeDetectorRef,
   Component,
-  Input,
   OnDestroy,
   OnInit,
   TemplateRef,
 } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { response } from 'express';
+import { LOADIPHLPAPI } from 'dns';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { Usuario } from 'src/app/interfaces/usuario';
 import { RecuperarIdService } from 'src/app/services/recuperar-id.service';
@@ -63,6 +62,8 @@ export class UsuarioAdminComponent implements OnInit {
     this._usuarioService.getUsuarios().subscribe((data) => {
       this.usuarios = data.content;
       this.encountered = data.content;
+      console.log(this.usuarios);
+      console.log(this.encountered);
     });
     this.cd.detectChanges();
   }
@@ -144,15 +145,18 @@ export class UsuarioAdminComponent implements OnInit {
 
   search() {
     this.encountered = this.usuarios;
+    console.log(this.toSearch);
 
     this.encountered = this.usuarios.filter((res) => {
       if (res.nombre) {
-        res.nombre
-          .toLocaleLowerCase()
-          .match(this.toSearch.toLocaleLowerCase()) ||
+        return (
+          res.nombre
+            .toLocaleLowerCase()
+            .match(this.toSearch.toLocaleLowerCase()) ||
           res.apellido
             .toLocaleLowerCase()
-            .match(this.toSearch.toLocaleLowerCase());
+            .match(this.toSearch.toLocaleLowerCase())
+        );
       }
     });
   }
