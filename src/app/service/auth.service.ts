@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
-import { UserI } from '../interfaces/user.interface'
+import { MailToFrom, UserI } from '../interfaces/user.interface'
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
@@ -9,34 +9,36 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AuthService {
 
-  baseURL = 'https://bisblick-back-muni.herokuapp.com/auth';
+  baseURL = 'https://bisblick-back-muni.herokuapp.com';
+ 
 
   constructor(private http:HttpClient) { 
   }
 
-  // async resetPassword(email:string):Promise<void>{
+  // async resetPassword(email:MailToFrom){
   //   try{
-  //     return this.http.sendPasswordResetEmail(email);
+  //     return this.http.post(this.baseURL+'sendMailtemplate', email);
   //   }
   //   catch(error){console.log(error)}
   // }
+  resetPassword (email:MailToFrom){
+    return this.http.post(this.baseURL+'/auth'+'/recuperar', email);
+  }
 
-  // async sendVerificationEmail(): Promise<void> {
-  //   return (await this.http.currentUser).sendEmailVerification();
-  // }
 
-  // async login(email: string, password: string) {
+
+  // async login(usuario: UserI) {
   //   try{
-  //     const result = await this.http.singInWithEmailAndPassword(
-  //       email,
-  //       password
+  //     const result = this.http.post(this.baseURL + '/login', usuario
   //     );
-  //     return result;
+  //     return result; }
   //     catch (error) {
   //       console.log(error);
-  //     }
-  //   }
+  //     } 
   // }
+  login (user: UserI) {
+    return this.http.post (this.baseURL+'/auth'+'/login',user)
+  }
 
   getSession() {
     let currentSession = localStorage.getItem('session');
@@ -49,7 +51,7 @@ export class AuthService {
   loginByEmail(user: UserI): Observable < any > {
     
     // return this.afAuth.auth.singInWhitEmailAndPassword(email, password);
-    return this.http.post(this.baseURL + '/login', user)
+    return this.http.post(this.baseURL+'/auth'+'/login',user)
 
   }
 
