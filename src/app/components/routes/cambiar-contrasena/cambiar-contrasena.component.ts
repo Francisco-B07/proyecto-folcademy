@@ -33,6 +33,8 @@ export class CambiarContrasenaComponent implements OnInit {
       email: this.email,
       newpassword: this.usuarioForm.get('newPassword')?.value,
     };
+    console.log('UUUUUUUUUUUUUUU', USUARIO);
+
     const repetirContraseña = this.usuarioForm.get('repetirPassword')?.value;
     if (USUARIO.newpassword == repetirContraseña) {
       this._authService.cambiarPassword(USUARIO).subscribe((data) => {

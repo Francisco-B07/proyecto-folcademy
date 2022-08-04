@@ -58,7 +58,12 @@ export class AuthService {
     return this.http.post(this.baseURL + '/auth/change_password', usuario);
   }
   enviarEmail(USUARIO: ModificarPassword): Observable<any> {
-    return this.http.post(this.baseURL + '/sendMailtemplate', USUARIO);
+    console.log('USUARIO DESDE SERVICE', USUARIO);
+
+    return this.http.post(
+      'https://bisblick-back-muni.herokuapp.com/sendMailtemplate',
+      USUARIO
+    );
   }
   cambiarPassword(USUARIO: ModificarPassword): Observable<any> {
     return this.http.post(this.baseURL + '/auth/recuperar', USUARIO);

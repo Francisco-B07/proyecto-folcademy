@@ -31,12 +31,13 @@
         />
 
         <div>
-          <form>
+          <form [formGroup]="usuarioForm" (ngSubmit)="cambiarPassword()">
             <div class="mb-3">
               <input
                 type="password"
                 class="form-control m-auto input mt-sm-5"
                 placeholder="Nueva Contraseña"
+                formControlName="newPassword"
               />
             </div>
 
@@ -45,11 +46,17 @@
                 type="password"
                 class="form-control m-auto input mt-sm-5"
                 placeholder="Repetir Contraseña"
+                formControlName="repetirPassword"
               />
             </div>
 
             <div class="d-flex justify-content-center">
-              <button type="button" class="boton" routerLink="/">
+              <button
+                type="button"
+                class="boton"
+                routerLink="/"
+                (click)="cambiarPassword()"
+              >
                 Guardar contraseña
               </button>
             </div>
