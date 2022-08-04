@@ -31,31 +31,14 @@ export class CambiarContrasenaComponent implements OnInit {
     this.email = this.localstorage.get('email');
     const USUARIO: ModificarPassword = {
       email: this.email,
-      newpassword: this.usuarioForm.get('newPassword')?.value,
+      password: this.usuarioForm.get('newPassword')?.value,
     };
-    console.log('UUUUUUUUUUUUUUU', USUARIO);
 
     const repetirContraseña = this.usuarioForm.get('repetirPassword')?.value;
-    if (USUARIO.newpassword == repetirContraseña) {
-      this._authService.cambiarPassword(USUARIO).subscribe((data) => {
-        Swal.fire({
-          position: 'bottom-end',
-          icon: 'success',
-          title: '¡La contraseña se ha guardado exitosamente!',
-          showConfirmButton: false,
-          timer: 1500,
-        });
-        console.log(data);
-        this.router.navigate(['/login']);
-      });
-    } else {
-      Swal.fire({
-        position: 'bottom-end',
-        icon: 'error',
-        title: 'No repitió correctamente la nueva contraseña',
-        showConfirmButton: false,
-        timer: 1500,
-      });
-    }
+
+    this._authService.cambiarPassword(USUARIO).subscribe((data) => {
+      console.log(data);
+      this.router.navigate(['/login']);
+    });
   }
 }
