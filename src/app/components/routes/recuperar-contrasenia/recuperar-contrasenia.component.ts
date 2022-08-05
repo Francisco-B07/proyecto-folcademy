@@ -40,7 +40,6 @@ export class RecuperarContraseniaComponent implements OnInit {
     const USUARIO: ModificarPassword = {
       email: this.usuarioForm.get('email')?.value,
     };
-    console.log('mailllll DESDE RECUPERAR', USUARIO);
     this.localstorage.set('email', USUARIO.email);
     this._authService.enviarEmail(USUARIO).subscribe((data) => {
       console.log(data);
