@@ -3,13 +3,18 @@
     font-size: 15px;
   }
   .contenedor{
-    margin-top: 50px;
+    margin-top: 150px;
+    zoom: 0.9;
+    position: relative;
+    z-index: 1;
+    top: 106px;
+    height: calc(100vh - 78px);
   }
   .cambio{  
     box-sizing: border-box;
     width: 482px;
     height: 578px;
-    background: #FFFFFF;
+    background: #FDF8F8;
     border: 1px solid #857B7B;
     box-shadow: 0px 2px 7px rgb(0 0 0 / 20%);
   }
@@ -22,13 +27,20 @@
     box-sizing: border-box;
     width: 340px;
     height: 39.23px;
-    background: #FFFFFF;
+    
     border: 1px solid #857B7B;
+    background-color: #FDF8F8;
   }
   .input::placeholder{
     text-align: center;
     color: #555555;
     font-size: 20px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #383838;
   }
   .boton-usuario{
     width: 256px;
@@ -46,6 +58,10 @@
     line-height: 24px;
     color: #FFFFFF;
   }
+  .boton-usuario:hover{
+    width: 258px;
+    height: 36px;
+  }
 .cancelar{
   width: 256px;
   background-color: #FFFFFF;
@@ -57,5 +73,6 @@
   line-height: 27px;
   color: #857B7B;
   margin-left: 112px;
-    margin-right: 112px;
+  margin-right: 112px;
+  margin-top: 33px;
 }

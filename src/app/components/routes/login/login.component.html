@@ -1,32 +1,85 @@
-<!-- FALTA IMPLEMENTACIÓN -->
-<div>
-    <h4 class="miga-de-pan p-1 m-1">Inicio de sesión</h4>
-</div>
-<div class="container">
-    <div class="text-center mb-3">
-      <img src="assets/bb.png" alt="Logo de Bisblick.">
-    </div>
-    <form class="d-flex justify-content-center flex-column align-items-center">
+<div class="contenedor-login">
+  <div class="migas-de-pan">
+    <ul class="breadcrumb">
+      <li class="breadcrumb-item d-flex">
+        <a class="nav-link" routerLink="/">
+          <img
+            class="flecha-atras"
+            href="https://www.bisblick.org/quienes-somos/"
+            src="../../../../assets/Arrow left short.svg"
+            alt=""
+          />
+        </a>
+        <a class="nav-link">Inicio de sesión</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="d-flex flex-column align-items-center seccion">
+    <img
+      class="logo"
+      src="../../../../assets/logo_talentojovenc 29.png"
+      alt="Logo de Bisblick."
+    />
+
+    <form
+      [formGroup]="loginForm"
+      (ngSubmit)="onLogin()"
+      class="d-flex justify-content-center flex-column align-items-center"
+    >
       <div class="div-1">
-        <input type="email" class="form-control input" placeholder="Usuario o Email">
+        <input
+          type="email"
+          class="form-control input"
+          placeholder="Usuario o Email"
+          formControlName="email"
+        />
       </div>
       <div class="div-2">
-        <input type="password" class="form-control input" placeholder="Contraseña">
+        <input
+          type="password"
+          class="form-control input"
+          placeholder="Contraseña"
+          formControlName="password"
+        />
       </div>
-  
+
       <div class="div-3">
-        <button type="button" class="btn boton" routerLink="/usuario-admin"><p class="letra-boton">Iniciar Sesion</p></button>
-      </div>  
+        <button
+          type="button"
+          class="boton"
+          [disabled]="loginForm.invalid"
+          (click)="onLogin()"
+        >
+          Iniciar Sesión
+        </button>
+      </div>
     </form>
 
-    <div class="mb-3">
-        <h2 class="linea"><span>o</span></h2>
-        
-        <a href="" class="justify-content-center d-flex text-decoration-none enlace" routerLink="/recuperar-contraseña">Recuperar contraseña</a>
-        <br>
-        <a href="" class="justify-content-center d-flex text-decoration-none enlace" routerLink="/contraseña">Cambiar contraseña</a>
-        
+    <ng-template let-error let-text="text" #passwordError>
+      <b>Error:</b>
+      <div *ngIf="error?.minlegth">
+        <i
+          >No cumples con los caracteres minimos que son({{
+            error?.minlenght.requiredLength
+          }}), ingresaste solo: {{ error?.minlength?.actualLength }}</i
+        >
       </div>
+    </ng-template>
 
-  </div> 
-  
+    <ng-template let-error let-text="text" #mensajeError>
+      {{ error | json }} {{ text }}
+    </ng-template>
+    <div class="d-flex">
+      <img class="linea" src="../../../../assets/Line 60.svg" alt="" />
+      <img src="../../../../assets/Line 60.svg" alt="" />
+    </div>
+    <a class="text-decoration-none enlace" routerLink="/recuperar-contraseña"
+      >Recuperar contraseña</a
+    >
+
+    <a class="text-decoration-none enlace" routerLink="/modificar-clave"
+      >Cambiar contraseña</a
+    >
+  </div>
+</div>

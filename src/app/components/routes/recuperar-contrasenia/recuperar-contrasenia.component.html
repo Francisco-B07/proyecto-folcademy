@@ -1,20 +1,55 @@
-<p class="migas-de-pan">Inicio de sesión/ Recuperar Conrtraseña</p>
-<div class="d-flex justify-content-center container">
+<div class="seccion">
+  <div class="migas-de-pan">
+    <ul class="breadcrumb">
+      <li class="breadcrumb-item d-flex">
+        <a class="nav-link" routerLink="/login">
+          <img
+            class="flecha-atras"
+            href="https://www.bisblick.org/quienes-somos/"
+            src="../../../../assets/Arrow left short.svg"
+            alt=""
+          />
+        </a>
+        <a class="nav-link" routerLink="/login">Inicio de sesión/</a>
+        <span class="nav-link link-usuarios">Recuperar Contraseña</span>
+      </li>
+    </ul>
+  </div>
   <div class="d-grid justify-content-center recuperar-contrasenia">
-    <div class="d-flex justify-content-center contenedor-imagen">
+    <!-- <div class="d-flex justify-content-center contenedor-imagen">
       <img src="../../../../assets/logo_talentojovenc 2.png" alt="" />
-    </div>
-    <h2 class="titulo">Recupera tu cuenta</h2>
+    </div> -->
+    <h2 class="titulo">Recupera tu contraseña</h2>
     <div
       class="d-flex flex-column align-items-center recuperar-contrasenia__input"
     >
+      <img
+        src="../../../../assets/logo_talentojovenc 2.png"
+        alt=""
+        class="imagen"
+      />
       <h3 class="texto">Ingresa tu correo electrónico</h3>
-      <div class="d-grid justify-content-center contenedor-input">
+      <form
+        [formGroup]="usuarioForm"
+        (ngSubmit)="enviarEmail()"
+        class="d-grid justify-content-center contenedor-input"
+      >
         <div class="d-flex justify-content-center">
-          <input class="input" type="email" placeholder="Correo electrónico " />
+          <input
+            class="input"
+            type="email"
+            placeholder="Correo electrónico "
+            formControlName="email"
+            required
+          />
         </div>
 
-        <button type="button" class="btn boton" (click)="openModal(template)">
+        <button
+          type="button"
+          class="btn boton"
+          (click)="openModal(template)"
+          (click)="enviarEmail()"
+        >
           Recuperar Contraseña
         </button>
 
@@ -34,7 +69,7 @@
             contraseña
           </div>
         </ng-template>
-      </div>
+      </form>
     </div>
   </div>
 </div>

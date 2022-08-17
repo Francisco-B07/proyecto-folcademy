@@ -1,33 +1,48 @@
 /* .recuperar-contrasenia {
   margin-top: 40px;
 } */
-
+.seccion {
+  /* margin-top: 90px; */
+  zoom: 0.9;
+  margin-top: 126px;
+  height: calc(110vh);
+}
 .titulo {
-  margin-top: 42px;
+  margin-top: 0px;
   text-align: center;
-  margin-bottom: 14px;
-  font-family: "Dosis";
+  margin-bottom: 30px;
+  margin-left: 50px;
+  width: 313px;
+  height: 30px;
+  font-family: "Montserrat";
   font-style: normal;
-  font-weight: 600;
-  font-size: 36px;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
   color: #333333;
 }
+.imagen {
+  width: 237px;
+  height: 73px;
+  margin-top: 30px;
+}
 .recuperar-contrasenia__input {
-  width: 397px;
-  height: 370px;
-  background-color: #fdf8f8;
-  border: 1px solid #ea138c;
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   margin-bottom: 10px;
+  box-sizing: border-box;
+  width: 411px;
+  height: 474px;
+  background: #fdf8f8;
+  border: 1px solid #857b7b;
 }
 .texto {
   margin-top: 53px;
   width: 263px;
   height: 64px;
-  font-family: "Dosis";
+  font-family: "Montserrat";
   font-style: normal;
-  font-weight: 500;
-  font-size: 27px;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 30px;
   text-align: center;
   color: #403a3a;
 }
@@ -36,29 +51,48 @@
   margin-top: 46px;
 }
 .input {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+
+  color: #555555;
+  text-align: center;
+
   padding: 10px;
   width: 236px;
   height: 47px;
-  background-color: #eaeaea;
-  border: 5px solid #ea138c;
-  box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.25);
+  border: 1px solid #857b7b;
+  background-color: #fdf8f8;
 }
 .input::placeholder {
   text-align: center;
 }
 .boton {
-  margin-top: 62px;
-  width: 256px;
-  height: 34px;
-  background: #ea138c;
-  box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.25);
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 19px;
-  color: #fdf8f8;
+  margin-top: 67px;
+  margin-bottom: 75px;
   border: none;
+  width: 293px;
+  height: 37.4px;
+  background: #ea138c;
+  box-shadow: 2px 4px 4px rgb(0 0 0 / 25%);
+  border-radius: 26.5px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+}
+.boton:hover {
+  margin-top: 66px;
+  width: 295px;
+  height: 39.4px;
+}
+.boton:disabled {
+  background: #f077bb;
 }
 .texto-modal {
   height: 112px;
@@ -71,14 +105,29 @@
   margin: 30px 22px;
   background: #fdf8f8;
   border: 2px solid #b97ebb;
-  border-radius: 10px;
 }
 .migas-de-pan {
-  font-family: "Dosis";
+  margin-top: 15px;
+}
+.breadcrumb-item {
+  margin-left: 26px;
+  margin-top: 12px;
+}
+.flecha-atras {
+  margin-top: -5px;
+}
+.nav-link {
+  padding: 8px 4px;
+
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
-  color: #555555;
-  margin-top: 36px;
-  margin-left: 13px;
+  font-size: 16px;
+  line-height: 20px;
+  color: #857b7b !important;
+}
+.link-usuarios {
+  text-decoration: underline;
+  color: #857b7b !important;
+  padding-left: 0;
 }
